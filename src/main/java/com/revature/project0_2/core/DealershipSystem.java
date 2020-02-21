@@ -7,9 +7,9 @@ import java.util.Scanner;
 import org.apache.log4j.Logger;
 
 import com.revature.project0_2.dao.SerializationDAO;
+//import com.revature.project0_2.dao.SqlDao;
 
-//public  class DealershipSystem<T> {
-public  class DealershipSystem<T> extends SerializationDAO<T>{
+public  class DealershipSystem<T> {
 	// DealershipSystem is simply a collection of methods.
 	private static Logger log = Logger.getRootLogger();
 	public final static String DIRECTORYNAME = "src\\main\\resources\\DAOFiles\\";
@@ -50,12 +50,14 @@ public  class DealershipSystem<T> extends SerializationDAO<T>{
 	
 	public static void save(Object o) {
 		log.debug("DealershipSystem.save(Object o)");
+		//SqlDao dao = new SqlDao();
 		SerializationDAO dao = new SerializationDAO();
 		dao.writeSerial(o);
 	}
 
 	public static Employee getEmployee(String id) {
 		log.debug("DealershipSystem.getEmployer(String id)");
+		//SqlDao dao = new SqlDao();
 		SerializationDAO dao = new SerializationDAO();
 		Employee emp = (Employee) dao.readSerial(id, 'E');
 		if(emp != null) {
@@ -69,6 +71,7 @@ public  class DealershipSystem<T> extends SerializationDAO<T>{
 
 	public static Customer getCustomer(String id) {
 		log.debug("DealershipSystem.getCustomer(String id)");
+		//SqlDao dao = new SqlDao();
 		SerializationDAO dao = new SerializationDAO();
 		Customer cus = (Customer) dao.readSerial(id, 'C');
 		if(cus != null) {
@@ -82,6 +85,7 @@ public  class DealershipSystem<T> extends SerializationDAO<T>{
 
 	public static Vehicle getVehicle(String id) {
 		log.debug("DealershipSystem.getVehicle(String id)");
+		//SqlDao dao = new SqlDao();
 		SerializationDAO dao = new SerializationDAO();
 		Vehicle veh = (Vehicle) dao.readSerial(id, 'V');
 		if(veh != null) {
@@ -102,6 +106,7 @@ public  class DealershipSystem<T> extends SerializationDAO<T>{
 		ArrayList<Employee> eList = new ArrayList<Employee>();
 		ArrayList<Customer> cList = new ArrayList<Customer>();
 		*/
+		//SqlDao dao = new SqlDao();
 		SerializationDAO dao = new SerializationDAO();
 		
 
