@@ -8,7 +8,8 @@ import org.apache.log4j.Logger;
 
 import com.revature.project0_2.dao.SerializationDAO;
 
-public  class DealershipSystem<T> {
+//public  class DealershipSystem<T> {
+public  class DealershipSystem<T> extends SerializationDAO<T>{
 	// DealershipSystem is simply a collection of methods.
 	private static Logger log = Logger.getRootLogger();
 	public final static String DIRECTORYNAME = "src\\main\\resources\\DAOFiles\\";

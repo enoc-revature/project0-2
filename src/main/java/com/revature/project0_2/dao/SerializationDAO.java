@@ -16,7 +16,7 @@ import com.revature.project0_2.core.DealershipSystem;
 import com.revature.project0_2.core.Employee;
 import com.revature.project0_2.core.Vehicle;
 
-public class SerializationDAO<T> {
+public class SerializationDAO<T> implements InterfaceDAO<T> {
 	private static Logger log = Logger.getRootLogger();
 	//private final String directoryName = "src\\main\\resources\\DAOFiles\\";
 
