@@ -16,8 +16,8 @@ public class Menus {
 		String id = s.nextLine();
 		System.out.print("Password: ");
 		String pw = s.nextLine();
-		if(DealershipSystem.checkEmployeeCredentials(id, pw)) {
-			return DealershipSystem.getEmployee(id);
+		if(DealershipSystemWithSql.checkEmployeeCredentials(id, pw)) {
+			return DealershipSystemWithSql.getEmployee(id);
 		} else {
 			return null;
 		}
@@ -29,8 +29,8 @@ public class Menus {
 		String id = s.nextLine();
 		System.out.print("Password: ");
 		String pw = s.nextLine();
-		if(DealershipSystem.checkCustomerCredentials(id, pw)) {
-			return DealershipSystem.getCustomer(id);
+		if(DealershipSystemWithSql.checkCustomerCredentials(id, pw)) {
+			return DealershipSystemWithSql.getCustomer(id);
 		} else {
 			return null;
 		}
@@ -97,7 +97,7 @@ public class Menus {
 		char accountType = input.toUpperCase().charAt(0);
 		
 		switch(accountType) {
-		case 'E': createEmployee();
+		case 'E': newEmployee();
 					break;
 		case 'C': createCustomer();
 					break;
@@ -106,7 +106,7 @@ public class Menus {
 		
 	}
 	
-	public void createEmployee() {
+	public void newEmployee() {
 		Employee emp = new Employee();
 
 		// Get info from user
@@ -122,7 +122,7 @@ public class Menus {
 		emp.password = s.nextLine();
 		
 		// Save info
-		DealershipSystem.save(emp);
+		DealershipSystemWithSql.createEmployee(emp);
 	}
 	
 	public void createCustomer() {
@@ -136,12 +136,12 @@ public class Menus {
 		System.out.print("Address: ");
 		cus.address = s.nextLine();
 		System.out.print("Credit Card Number: ");
-		cus.creditCard = s.nextLine();
+		cus.id = s.nextLine();
 		System.out.print("Password: ");
 		cus.password = s.nextLine();
 		
 		// Save info
-		DealershipSystem.save(cus);
+		DealershipSystemWithSql.save(cus);
 		
 	}
 	public void addVehicle() {
@@ -172,14 +172,14 @@ public class Menus {
 		// Save vehicle
 		// Get vehicle list to make sure there 
 		// 	are no duplicates. VIN is Primary Key
-		DealershipSystem.save(v);
+		DealershipSystemWithSql.save(v);
 	}
 
 	public void  removeVehicle() {
 		System.out.print("VIN of vehicle to remove: ");
 		String id = s.nextLine();
-		//File file = new File(DealershipSystem.DIRECTORYNAME + "vehicles\\");
-		File file = new File(DealershipSystem.DIRECTORYNAME + "vehicles\\_" + id + ".dat");
+		//File file = new File(DealershipSystemWithSql.DIRECTORYNAME + "vehicles\\");
+		File file = new File(DealershipSystemWithSql.DIRECTORYNAME + "vehicles\\_" + id + ".dat");
 		if(file.exists()) {
 			try {
 				file.delete();
@@ -195,11 +195,11 @@ public class Menus {
 	public void  viewVehicles() {
 		// Display Vehicles
 		log.debug("viewVehicles()");
-		File folder = new File(DealershipSystem.DIRECTORYNAME + "vehicles\\");
-		ArrayList<Vehicle> vList = DealershipSystem.getVehicles(folder.list());
+		File folder = new File(DealershipSystemWithSql.DIRECTORYNAME + "vehicles\\");
+		ArrayList<Vehicle> vList = DealershipSystemWithSql.getVehicles(folder.list());
 		log.debug("folder.list()[0]=" + folder.list()[0]);
 		//String[] fileNames = file.list();
-		//vList = DealershipSystem.getVehicle(fileNames);
+		//vList = DealershipSystemWithSql.getVehicle(fileNames);
 
 		// List Vehicles
 		System.out.println("Make\tModel\tBid\tOffer\tPrice\tVIN\tPended");
@@ -216,11 +216,11 @@ public class Menus {
 	public void  viewAllPayments() {
 		// Display Vehicles
 		log.debug("viewVehicles()");
-		File folder = new File(DealershipSystem.DIRECTORYNAME + "vehicles\\");
-		ArrayList<Vehicle> vList = DealershipSystem.getVehicles(folder.list());
+		File folder = new File(DealershipSystemWithSql.DIRECTORYNAME + "vehicles\\");
+		ArrayList<Vehicle> vList = DealershipSystemWithSql.getVehicles(folder.list());
 		log.debug("folder.list()[0]=" + folder.list()[0]);
 		//String[] fileNames = file.list();
-		//vList = DealershipSystem.getVehicle(fileNames);
+		//vList = DealershipSystemWithSql.getVehicle(fileNames);
 
 		// List Vehicles
 		System.out.println("Make\tModel\tVIN\tOwner\tPrinciple\tPayments");
@@ -235,11 +235,11 @@ public class Menus {
 	public void  viewOffers() {
 		// Display Vehicles
 		log.debug("viewVehicles()");
-		File folder = new File(DealershipSystem.DIRECTORYNAME + "vehicles\\");
-		ArrayList<Vehicle> vList = DealershipSystem.getVehicles(folder.list());
+		File folder = new File(DealershipSystemWithSql.DIRECTORYNAME + "vehicles\\");
+		ArrayList<Vehicle> vList = DealershipSystemWithSql.getVehicles(folder.list());
 		log.debug("folder.list()[0]=" + folder.list()[0]);
 		//String[] fileNames = file.list();
-		//vList = DealershipSystem.getVehicle(fileNames);
+		//vList = DealershipSystemWithSql.getVehicle(fileNames);
 
 		// List Vehicles
 		System.out.println("Make\tModel\tBid\tOffer\tVIN\tOwner\tPayments");
@@ -255,11 +255,11 @@ public class Menus {
 	public void  viewPayments() {
 		// Display Vehicles
 		log.debug("viewPayments()");
-		File folder = new File(DealershipSystem.DIRECTORYNAME + "vehicles\\");
-		ArrayList<Vehicle> vList = DealershipSystem.getVehicles(folder.list());
+		File folder = new File(DealershipSystemWithSql.DIRECTORYNAME + "vehicles\\");
+		ArrayList<Vehicle> vList = DealershipSystemWithSql.getVehicles(folder.list());
 		log.debug("folder.list()[0]=" + folder.list()[0]);
 		//String[] fileNames = file.list();
-		//vList = DealershipSystem.getVehicle(fileNames);
+		//vList = DealershipSystemWithSql.getVehicle(fileNames);
 
 		// List Vehicles
 		System.out.println("Make\tModel\tPayment");
@@ -270,11 +270,11 @@ public class Menus {
 
 	public void  viewOffers() {
 		log.debug("viewOffers()");
-		File folder = new File(DealershipSystem.DIRECTORYNAME + "vehicles\\");
-		ArrayList<Vehicle> vList = DealershipSystem.getVehicles(folder.list());
+		File folder = new File(DealershipSystemWithSql.DIRECTORYNAME + "vehicles\\");
+		ArrayList<Vehicle> vList = DealershipSystemWithSql.getVehicles(folder.list());
 		log.debug("folder.list()[0]=" + folder.list()[0]);
 		//String[] fileNames = file.list();
-		//vList = DealershipSystem.getVehicle(fileNames);
+		//vList = DealershipSystemWithSql.getVehicle(fileNames);
 
 		// List Vehicles
 		System.out.println("Make\tModel\tBid\tOffer\tVIN\tOwner\tPayments");
@@ -302,10 +302,10 @@ public class Menus {
 				System.out.print("Enter your offer: $");
 				price = s.nextDouble();
 				
-				v = DealershipSystem.getVehicle(vin);
+				v = DealershipSystemWithSql.getVehicle(vin);
 				if(Double.parseDouble(v.highestOffer) < price) {
 					v.highestOffer = price.toString();
-					DealershipSystem.save(v);
+					DealershipSystemWithSql.save(v);
 					System.out.println("Offer successful!");
 				} else {
 					System.out.println("Offer is too low.");
@@ -320,16 +320,16 @@ public class Menus {
 	public void  viewCustomerVehicles(Customer c) { // Customer Menu
 		// Display Vehicles
 		log.debug("viewCustomerVehicles()");
-		File folder = new File(DealershipSystem.DIRECTORYNAME + "vehicles\\");
-		ArrayList<Vehicle> vList = DealershipSystem.getVehicles(folder.list());
+		File folder = new File(DealershipSystemWithSql.DIRECTORYNAME + "vehicles\\");
+		ArrayList<Vehicle> vList = DealershipSystemWithSql.getVehicles(folder.list());
 		log.debug("folder.list()[0]=" + folder.list()[0]);
 		//String[] fileNames = file.list();
-		//vList = DealershipSystem.getVehicle(fileNames);
+		//vList = DealershipSystemWithSql.getVehicle(fileNames);
 
 		// List Vehicles
 		System.out.println("Make\tModel\tVIN\tPrinciple\tPayments");
 		for(Vehicle v : vList) {
-			if(v.pended && c.creditCard.contentEquals(v.highestBidderOrOwner))
+			if(v.pended && c.id.contentEquals(v.highestBidderOrOwner))
 				System.out.printf("%s\t%s\t%s\t%s\t\t%s%n",
 						v.make, v.model, v.vin, "$"+v.principle, "$"+v.monthlyPayment);
 		}
@@ -338,9 +338,9 @@ public class Menus {
 	public void chooseOffer() { // Employee
 		// Display Vehicles
 		log.debug("chooseOffers()");
-		File folder = new File(DealershipSystem.DIRECTORYNAME + "vehicles\\");
+		File folder = new File(DealershipSystemWithSql.DIRECTORYNAME + "vehicles\\");
 		//String[] fileNames = file.list();
-		//vList = DealershipSystem.getVehicle(fileNames);
+		//vList = DealershipSystemWithSql.getVehicle(fileNames);
 
 		// List Vehicles
 		Vehicle v = new Vehicle();
@@ -353,7 +353,7 @@ public class Menus {
 			Scanner s = new Scanner(System.in);
 			log.debug("Still in while loop.");
 			System.out.println("Make\tModel\tBid\tOffer\tVIN");
-			ArrayList<Vehicle> vList = DealershipSystem.getVehicles(folder.list());
+			ArrayList<Vehicle> vList = DealershipSystemWithSql.getVehicles(folder.list());
 			log.debug("folder.list()[0]=" + folder.list()[0]);
 			for(Vehicle vIter : vList) {
 				if(!vIter.pended) {
@@ -372,7 +372,7 @@ public class Menus {
 				vin = s.nextLine();
 				log.debug("vin="+vin);
 				
-				v = DealershipSystem.getVehicle(vin);
+				v = DealershipSystemWithSql.getVehicle(vin);
 					
 				log.debug("After getVehicle()");
 				if(v==null) {
@@ -384,8 +384,8 @@ public class Menus {
 					v.highestOffer = null;
 					v.pended = true;
 					v.paymentDuration = "60";
-					v.monthlyPayment = DealershipSystem.calculatePayments(v.principle, v.paymentDuration);
-					DealershipSystem.save(v);
+					v.monthlyPayment = DealershipSystemWithSql.calculatePayments(v.principle, v.paymentDuration);
+					DealershipSystemWithSql.save(v);
 				}
 			} else {
 				leaveMenu = true;
@@ -410,12 +410,12 @@ public class Menus {
 				System.out.print("Enter your offer: $");
 				price = s.nextDouble();
 			
-				v = DealershipSystem.getVehicle(vin);
-				if(DealershipSystem.rejectPended(v)) {
+				v = DealershipSystemWithSql.getVehicle(vin);
+				if(DealershipSystemWithSql.rejectPended(v)) {
 					System.out.println("Cannot make offer on a vehicle that has been sold.");
 				} else if(Double.parseDouble(v.highestOffer) < price) {
 					v.highestOffer = price.toString();
-					DealershipSystem.save(v);
+					DealershipSystemWithSql.save(v);
 					System.out.println("Offer successful!");
 				} else {
 					System.out.println("Offer is too low.");
@@ -427,9 +427,9 @@ public class Menus {
 		*/
 		// Display Vehicles
 		log.debug("makeOffers()");
-		File folder = new File(DealershipSystem.DIRECTORYNAME + "vehicles\\");
+		File folder = new File(DealershipSystemWithSql.DIRECTORYNAME + "vehicles\\");
 		//String[] fileNames = file.list();
-		//vList = DealershipSystem.getVehicle(fileNames);
+		//vList = DealershipSystemWithSql.getVehicle(fileNames);
 
 		// List Vehicles
 		Vehicle v = new Vehicle();
@@ -442,7 +442,7 @@ public class Menus {
 			Scanner s = new Scanner(System.in);
 			log.debug("Still in while loop.");
 			System.out.println("Make\tModel\tYear\tBid\tOffer\tVIN");
-			ArrayList<Vehicle> vList = DealershipSystem.getVehicles(folder.list());
+			ArrayList<Vehicle> vList = DealershipSystemWithSql.getVehicles(folder.list());
 			log.debug("folder.list()[0]=" + folder.list()[0]);
 			for(Vehicle vIter : vList) {
 				if(!vIter.pended) {
@@ -466,23 +466,23 @@ public class Menus {
 				System.out.print("Enter your offer: $");
 				price = s.nextDouble();
 				
-				v = DealershipSystem.getVehicle(vin);
+				v = DealershipSystemWithSql.getVehicle(vin);
 				log.debug("After getVehicle()");
 				if(v==null) {
 					System.out.println("Vehicle does not exist.");
 					continue;
 				}
-				if(DealershipSystem.rejectPended(v)) {
+				if(DealershipSystemWithSql.rejectPended(v)) {
 					System.out.println("Cannot make offer on a vehicle that has been sold.");
 				} else if(v.highestOffer.isEmpty()) {
 					v.highestOffer = price.toString();
-					v.highestBidderOrOwner = c.creditCard;
-					DealershipSystem.save(v);
+					v.highestBidderOrOwner = c.id;
+					DealershipSystemWithSql.save(v);
 					System.out.println("Offer successful!");
 				} else if(Double.parseDouble(v.highestOffer) < price) {
 					v.highestOffer = price.toString();
-					v.highestBidderOrOwner = c.creditCard;
-					DealershipSystem.save(v);
+					v.highestBidderOrOwner = c.id;
+					DealershipSystemWithSql.save(v);
 					System.out.println("Offer successful!");
 				} else {
 					System.out.println("Offer is too low.");

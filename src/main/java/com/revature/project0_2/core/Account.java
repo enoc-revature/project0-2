@@ -12,7 +12,6 @@ public class Account implements Serializable{
 	public String firstName;
 	public String lastName;
 	public String address;
+	public String id;
 	public String password;
-	//public transient String password;
-	
 }
