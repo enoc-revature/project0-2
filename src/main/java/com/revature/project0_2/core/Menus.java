@@ -172,6 +172,7 @@ public class Menus {
 		// Save vehicle
 		// Get vehicle list to make sure there 
 		// 	are no duplicates. VIN is Primary Key
+		//DealershipSystemWithSql.save(v);
 		DealershipSystemWithSql.save(v);
 	}
 

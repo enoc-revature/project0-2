@@ -55,8 +55,6 @@ public class DealershipSystemWithSql extends DealershipSystem{
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
-
 	}
 	
 	public static void createVehicle(Vehicle v) {
@@ -64,7 +62,7 @@ public class DealershipSystemWithSql extends DealershipSystem{
 		try (Connection conn = DriverManager.getConnection(credentials[0], credentials[1], credentials[2])) {
 			PreparedStatement ps = conn.prepareStatement(
 					"INSERT INTO vehicles " +
-					"(make,model,year,mileage,creation,condition,vin,bid) " +
+					"(make,model,year,mileage,mileage,condition,vin,bid) " +
 					"VALUES(?,?,?,?,?,?,?)");
 			ps.setString(1, v.make);
 			ps.setString(2, v.model);
@@ -210,7 +208,6 @@ public class DealershipSystemWithSql extends DealershipSystem{
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
 	}
 	
 	// DELETE
@@ -226,7 +223,4 @@ public class DealershipSystemWithSql extends DealershipSystem{
 			e.printStackTrace();
 		}	
 	}
-
-
-
 }
