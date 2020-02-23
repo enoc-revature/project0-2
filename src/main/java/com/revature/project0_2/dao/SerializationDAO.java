@@ -8,15 +8,13 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.apache.log4j.Logger;
-
 import com.revature.project0_2.core.Customer;
 import com.revature.project0_2.core.DealershipSystem;
 import com.revature.project0_2.core.Employee;
 import com.revature.project0_2.core.Vehicle;
 
-public class SerializationDAO<T> implements InterfaceDAO<T> {
+public class SerializationDAO<T> {
 	private static Logger log = Logger.getRootLogger();
 	//private final String directoryName = "src\\main\\resources\\DAOFiles\\";
 
@@ -37,7 +35,7 @@ public class SerializationDAO<T> implements InterfaceDAO<T> {
 		if(t instanceof Employee) {
 			employee = (Employee) t;
 			e2 = employee;
-			fileName =  "_" + e2.id + ".dat";
+			fileName =  "_" + e2.userId + ".dat";
 			locationName = DealershipSystem.DIRECTORYNAME + "employees\\" + fileName;
 		} else if(t instanceof Customer) {
 			customer = (Customer) t;

@@ -13,19 +13,19 @@ public class Vehicle implements Serializable{
 
 	public String make;
 	public String model;
-	public String year;
-	public String mileage;
-	public String condition; // make enum later
+	public Integer year;
+	public Double mileage;
+	//public String condition; // make enum later
 	//public transient ArrayList<String> bid;
 	//public transient ArrayList<String >offer;
 	//public transient String highestBid;
 	//public transient String lowestOffer;
-	public String bid = "";
-	public String highestOffer = "";
+	public Double bid;
+	public Double highestOffer;
 	public String vin;
-	public String highestBidderOrOwner = "Dealership";
-	public String monthlyPayment;
-	public String principle = ""; // offer that was accepted
-	public String paymentDuration; // in months
-	public boolean pended;
+	public String highestBidderOrOwner;
+	public Double monthlyPayment;
+	public Double principle; // offer that was accepted
+	public Integer paymentDuration; // in months
+	public Boolean pended;
 }

@@ -1,4 +1,5 @@
-CREATE TABLE employees(
+DROP TABLE employees_proj_0;
+CREATE TABLE employees_proj_0(
 firstName VARCHAR,
 lastName VARCHAR,
 address VARCHAR,
@@ -9,7 +10,8 @@ password VARCHAR NOT NULL,
 PRIMARY KEY(userid)
 );
 
-CREATE TABLE employees(
+DROP TABLE customers_proj_0;
+CREATE TABLE customers_proj_0(
 firstName VARCHAR,
 lastName VARCHAR,
 address VARCHAR,
@@ -19,13 +21,14 @@ password VARCHAR NOT NULL,
 PRIMARY KEY(userid)
 );
 
-CREATE TABLE vehicles(
-make VARCHAR,
-model VARCHAR,
+DROP TABLE vehicles_proj_0;
+CREATE TABLE vehicles_proj_0(
+make VARCHAR NOT NULL,
+model VARCHAR NOT NULL,
 year NUMERIC(8,0),
 mileage NUMERIC(8,1),
 condition VARCHAR,
-bid NUMERIC(8,2),
+bid NUMERIC(8,2) NOT NULL,
 highestOffer NUMERIC(8,2),
 vin VARCHAR,
 highestBidderOrOwner VARCHAR,

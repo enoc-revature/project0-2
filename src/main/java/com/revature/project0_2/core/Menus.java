@@ -117,7 +117,7 @@ public class Menus {
 		System.out.print("Address: ");
 		emp.address = s.nextLine();
 		System.out.print("Employee ID: ");
-		emp.id = s.nextLine();
+		emp.userId = s.nextLine();
 		System.out.print("Password: ");
 		emp.password = s.nextLine();
 		
@@ -136,7 +136,7 @@ public class Menus {
 		System.out.print("Address: ");
 		cus.address = s.nextLine();
 		System.out.print("Credit Card Number: ");
-		cus.id = s.nextLine();
+		cus.userId = s.nextLine();
 		System.out.print("Password: ");
 		cus.password = s.nextLine();
 		
@@ -155,19 +155,19 @@ public class Menus {
 		v.model = s.nextLine();
 		
 		System.out.print("Year: ");
-		v.year = s.nextLine();
+		v.year = s.nextInt();
 		
 		System.out.print("Mileage: ");
-		v.mileage = s.nextLine();
+		v.mileage = s.nextDouble();
 		
-		System.out.print("Condition: ");
-		v.condition = s.nextLine();
+//		System.out.print("Condition: ");
+//		v.condition = s.nextLine();
 		
 		System.out.print("VIN: ");
 		v.vin = s.nextLine();
 		
 		System.out.print("Bid Price: ");
-		v.bid = s.nextLine();
+		v.bid = s.nextDouble();
 
 		// Save vehicle
 		// Get vehicle list to make sure there 
@@ -304,8 +304,8 @@ public class Menus {
 				price = s.nextDouble();
 				
 				v = DealershipSystemWithSql.getVehicle(vin);
-				if(Double.parseDouble(v.highestOffer) < price) {
-					v.highestOffer = price.toString();
+				if(v.highestOffer < price) {
+					v.highestOffer = price;
 					DealershipSystemWithSql.save(v);
 					System.out.println("Offer successful!");
 				} else {
@@ -330,7 +330,7 @@ public class Menus {
 		// List Vehicles
 		System.out.println("Make\tModel\tVIN\tPrinciple\tPayments");
 		for(Vehicle v : vList) {
-			if(v.pended && c.id.contentEquals(v.highestBidderOrOwner))
+			if(v.pended && c.userId.contentEquals(v.highestBidderOrOwner))
 				System.out.printf("%s\t%s\t%s\t%s\t\t%s%n",
 						v.make, v.model, v.vin, "$"+v.principle, "$"+v.monthlyPayment);
 		}
@@ -384,7 +384,7 @@ public class Menus {
 					v.bid = null;
 					v.highestOffer = null;
 					v.pended = true;
-					v.paymentDuration = "60";
+					v.paymentDuration = 60;
 					v.monthlyPayment = DealershipSystemWithSql.calculatePayments(v.principle, v.paymentDuration);
 					DealershipSystemWithSql.save(v);
 				}
@@ -475,14 +475,14 @@ public class Menus {
 				}
 				if(DealershipSystemWithSql.rejectPended(v)) {
 					System.out.println("Cannot make offer on a vehicle that has been sold.");
-				} else if(v.highestOffer.isEmpty()) {
-					v.highestOffer = price.toString();
-					v.highestBidderOrOwner = c.id;
+				} else if(v.highestOffer == null) {
+					v.highestOffer = price;
+					v.highestBidderOrOwner = c.userId;
 					DealershipSystemWithSql.save(v);
 					System.out.println("Offer successful!");
-				} else if(Double.parseDouble(v.highestOffer) < price) {
-					v.highestOffer = price.toString();
-					v.highestBidderOrOwner = c.id;
+				} else if(v.highestOffer < price) {
+					v.highestOffer = price;
+					v.highestBidderOrOwner = c.userId;
 					DealershipSystemWithSql.save(v);
 					System.out.println("Offer successful!");
 				} else {

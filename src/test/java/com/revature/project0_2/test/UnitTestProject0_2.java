@@ -7,8 +7,14 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import com.revature.project0_2.core.*;
+import com.revature.project0_2.core.DealershipSystemWithSql;
 
 public class UnitTestProject0_2 {
+	// Use these objects throughout unit tests
+	Employee emp = new Employee();
+	Customer cus = new Customer();
+	Vehicle veh = new Vehicle();
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -20,15 +26,48 @@ public class UnitTestProject0_2 {
 
 	@Before
 	public void setUp() throws Exception {
+		// Classes with good inputs to be modified per test
+		// These values will reset before each test.
+		emp.firstName = "John";
+		emp.lastName = "Smith";
+		emp.address = "123 Ave.";
+		emp.userId = "userid";
+		emp.password = "password";
+		
+		cus.firstName = "John";
+		cus.lastName = "Smith";
+		cus.address = "123 Ave.";
+		cus.userId = "userid";
+		cus.password = "password";
+		cus.creditCard = 0;
+		
+		veh.make = "Toyota";
+		veh.model = "Yaris";
+		veh.year = 2007;
+		veh.mileage = 100000.0;
+		veh.vin = "JBC203840";
+		veh.bid = 2000.00;
+		veh.highestOffer = 0.0;
+		veh.highestBidderOrOwner = null;
+		veh.monthlyPayment = 0.0;
+		veh.principle = 0.0; // offer that was accepted
+		veh.paymentDuration = 60; // in months
+		veh.pended = false;
+		
 	}
 
 	@After
 	public void tearDown() throws Exception {
 	}
 
+	/*
+	 * DealershipSystemWithSql
+	 */
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void createEmployee_getEmployee() {
+		DealershipSystemWithSql.createEmployee(emp);
+		Employee empReturned = DealershipSystemWithSql.getEmployee(emp.userId);
+		assertEquals(emp,empReturned);
 	}
 
 }
