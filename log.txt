@@ -1,3 +1,160 @@
 2020-02-20 19:47:11 DEBUG root:57 - Program terminated soundly.
 2020-02-20 19:48:12 DEBUG root:57 - Program terminated soundly.
 2020-02-20 20:16:06 DEBUG root:57 - Program terminated soundly.
+2020-02-22 19:30:07 TRACE root:24 - createEmployee(Employee)
+2020-02-22 19:30:07 DEBUG root:82 - DealershipSystemWithSql.getEmployer(String id)
+2020-02-22 19:31:30 TRACE root:24 - createEmployee(Employee)
+2020-02-22 19:31:31 DEBUG root:82 - DealershipSystemWithSql.getEmployer(String id)
+2020-02-22 19:33:34 TRACE root:24 - createEmployee(Employee)
+2020-02-22 19:33:34 DEBUG root:82 - DealershipSystemWithSql.getEmployer(String id)
+2020-02-22 19:35:43 TRACE root:24 - createEmployee(Employee)
+2020-02-22 19:35:43 TRACE root:82 - DealershipSystemWithSql.getEmployer(String id)
+2020-02-22 19:49:32 TRACE root:24 - createEmployee(Employee)
+2020-02-22 19:49:33 DEBUG root:30 - Table length: org.postgresql.jdbc.PgResultSet@6833ce2c
+2020-02-22 19:49:33 TRACE root:88 - DealershipSystemWithSql.getEmployer(String id)
+2020-02-22 19:51:06 TRACE root:24 - createEmployee(Employee)
+2020-02-22 19:51:06 DEBUG root:30 - Table length: 0
+2020-02-22 19:51:06 TRACE root:88 - DealershipSystemWithSql.getEmployer(String id)
+2020-02-22 19:58:38 TRACE root:24 - createEmployee(Employee)
+2020-02-22 19:58:39 DEBUG root:32 - Table length: 0
+2020-02-22 19:58:39 TRACE root:94 - DealershipSystemWithSql.getEmployer(String id)
+2020-02-22 20:07:42 TRACE root:24 - createEmployee(Employee)
+2020-02-22 20:07:43 DEBUG root:61 - Table length: 0
+2020-02-22 20:07:43 TRACE root:108 - DealershipSystemWithSql.getEmployer(String id)
+2020-02-23 10:32:59 TRACE root:24 - createEmployee(Employee)
+2020-02-23 10:32:59 DEBUG root:61 - Table length: 0
+2020-02-23 10:32:59 TRACE root:108 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 10:43:36 TRACE root:243 - removeVehicle(Vehicle)
+2020-02-23 10:43:36 TRACE root:24 - createEmployee(Employee)
+2020-02-23 10:43:36 DEBUG root:61 - Table length: 0
+2020-02-23 10:43:36 TRACE root:108 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 10:55:10 TRACE root:243 - removeVehicle(Vehicle)
+2020-02-23 10:55:10 TRACE root:24 - createEmployee(Employee)
+2020-02-23 10:55:10 DEBUG root:61 - Table length: 0
+2020-02-23 10:55:10 TRACE root:108 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 10:59:27 TRACE root:244 - removeVehicle(Vehicle)
+2020-02-23 10:59:28 TRACE root:24 - createEmployee(Employee)
+2020-02-23 10:59:28 DEBUG root:61 - Table length: 0
+2020-02-23 10:59:28 TRACE root:108 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 10:59:28 DEBUG root:127 - EmployeeID: = null
+2020-02-23 10:59:57 TRACE root:24 - createEmployee(Employee)
+2020-02-23 10:59:57 DEBUG root:61 - Table length: 0
+2020-02-23 10:59:57 TRACE root:24 - createEmployee(Employee)
+2020-02-23 10:59:58 DEBUG root:61 - Table length: 0
+2020-02-23 10:59:58 TRACE root:108 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 10:59:58 DEBUG root:127 - EmployeeID: = null
+2020-02-23 11:02:36 TRACE root:24 - createEmployee(Employee)
+2020-02-23 11:02:36 DEBUG root:61 - Table length: 0
+2020-02-23 11:02:36 TRACE root:24 - createEmployee(Employee)
+2020-02-23 11:02:36 DEBUG root:61 - Table length: 0
+2020-02-23 11:02:36 TRACE root:108 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 11:02:36 DEBUG root:127 - EmployeeID: = null
+2020-02-23 11:07:41 TRACE root:24 - createEmployee(Employee)
+2020-02-23 11:07:42 DEBUG root:61 - Table length: 0
+2020-02-23 11:07:42 TRACE root:24 - createEmployee(Employee)
+2020-02-23 11:07:42 DEBUG root:61 - Table length: 0
+2020-02-23 11:07:42 TRACE root:108 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 11:07:42 DEBUG root:127 - EmployeeID: = null
+2020-02-23 11:08:28 TRACE root:24 - createEmployee(Employee)
+2020-02-23 11:08:28 DEBUG root:61 - Table length: 0
+2020-02-23 11:08:28 TRACE root:24 - createEmployee(Employee)
+2020-02-23 11:08:28 DEBUG root:61 - Table length: 0
+2020-02-23 11:08:28 TRACE root:108 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 11:08:28 DEBUG root:127 - EmployeeID: = null
+2020-02-23 11:10:30 TRACE root:24 - createEmployee(Employee)
+2020-02-23 11:10:31 DEBUG root:61 - Table length: 0
+2020-02-23 11:10:31 TRACE root:24 - createEmployee(Employee)
+2020-02-23 11:10:31 DEBUG root:61 - Table length: 0
+2020-02-23 11:10:31 TRACE root:108 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 11:10:31 DEBUG root:127 - EmployeeID: = userid
+2020-02-23 11:14:47 TRACE root:244 - removeVehicle(Vehicle)
+2020-02-23 11:14:47 TRACE root:24 - createEmployee(Employee)
+2020-02-23 11:14:47 DEBUG root:61 - Table length: 0
+2020-02-23 11:14:47 TRACE root:108 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 11:14:47 DEBUG root:127 - EmployeeID: = userid
+2020-02-23 11:15:17 TRACE root:24 - createEmployee(Employee)
+2020-02-23 11:15:18 DEBUG root:61 - Table length: 0
+2020-02-23 11:15:18 TRACE root:24 - createEmployee(Employee)
+2020-02-23 11:15:18 DEBUG root:61 - Table length: 0
+2020-02-23 11:15:18 TRACE root:108 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 11:15:18 DEBUG root:127 - EmployeeID: = userid
+2020-02-23 11:22:36 TRACE root:247 - removeVehicle(Vehicle)
+2020-02-23 11:22:36 TRACE root:24 - createEmployee(Employee)
+2020-02-23 11:22:36 DEBUG root:62 - Table length: 0
+2020-02-23 11:22:36 TRACE root:111 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 11:22:36 DEBUG root:130 - EmployeeID: = null
+2020-02-23 11:22:42 TRACE root:24 - createEmployee(Employee)
+2020-02-23 11:22:42 DEBUG root:62 - Table length: 0
+2020-02-23 11:22:42 TRACE root:24 - createEmployee(Employee)
+2020-02-23 11:22:42 DEBUG root:62 - Table length: 0
+2020-02-23 11:22:42 TRACE root:111 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 11:22:42 DEBUG root:130 - EmployeeID: = null
+2020-02-23 11:23:28 TRACE root:24 - createEmployee(Employee)
+2020-02-23 11:23:28 DEBUG root:62 - Table length: 0
+2020-02-23 11:23:28 TRACE root:24 - createEmployee(Employee)
+2020-02-23 11:23:28 DEBUG root:62 - Table length: 0
+2020-02-23 11:23:28 TRACE root:111 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 11:23:28 DEBUG root:130 - EmployeeID: = userid
+2020-02-23 11:31:05 DEBUG root:63 - Table length: 0
+2020-02-23 11:33:20 TRACE root:48 - recordExists(String,Character)
+2020-02-23 11:33:20 DEBUG root:59 - Query String: SELECT count(*) FROM employees_proj_0 WHERE userid=?
+2020-02-23 11:33:21 DEBUG root:65 - Table length: 0
+2020-02-23 11:33:53 TRACE root:48 - recordExists(String,Character)
+2020-02-23 11:33:53 DEBUG root:59 - Query String: SELECT count(*) FROM employees_proj_0 WHERE userid=?
+2020-02-23 11:33:53 DEBUG root:60 - UserID: userid
+2020-02-23 11:33:53 DEBUG root:66 - Table length: 0
+2020-02-23 11:36:46 TRACE root:48 - recordExists(String,Character)
+2020-02-23 11:36:46 DEBUG root:59 - Query String: SELECT count(*) FROM employees_proj_0 WHERE userid=?
+2020-02-23 11:36:46 DEBUG root:60 - UserID: userid
+2020-02-23 11:39:18 TRACE root:48 - recordExists(String,Character)
+2020-02-23 11:39:18 DEBUG root:59 - Query String: SELECT count(*) FROM employees_proj_0 WHERE userid=?
+2020-02-23 11:39:18 DEBUG root:60 - UserID: userid
+2020-02-23 11:39:18 DEBUG root:69 - Table length: 1
+2020-02-23 11:41:03 TRACE root:48 - recordExists(String,Character)
+2020-02-23 11:41:03 DEBUG root:59 - Query String: SELECT count(*) FROM employees_proj_0 WHERE userid=?
+2020-02-23 11:41:03 DEBUG root:60 - UserID: userid
+2020-02-23 11:41:03 DEBUG root:69 - Table length: 1
+2020-02-23 11:42:49 TRACE root:48 - recordExists(String,Character)
+2020-02-23 11:42:49 DEBUG root:59 - Query String: SELECT count(*) FROM employees_proj_0 WHERE userid=?
+2020-02-23 11:42:49 DEBUG root:60 - UserID: userid
+2020-02-23 12:01:52 TRACE root:251 - removeVehicle(Vehicle)
+2020-02-23 12:01:52 TRACE root:48 - recordExists(String,Character)
+2020-02-23 12:01:52 DEBUG root:59 - Query String: SELECT count(*) FROM employees_proj_0 WHERE userid=?
+2020-02-23 12:01:52 DEBUG root:60 - UserID: userid
+2020-02-23 12:02:25 TRACE root:251 - removeVehicle(Vehicle)
+2020-02-23 12:02:25 TRACE root:48 - recordExists(String,Character)
+2020-02-23 12:02:25 DEBUG root:59 - Query String: SELECT count(*) FROM employees_proj_0 WHERE userid=?
+2020-02-23 12:02:25 DEBUG root:60 - UserID: userid
+2020-02-23 12:02:44 TRACE root:24 - createEmployee(Employee)
+2020-02-23 12:02:45 TRACE root:48 - recordExists(String,Character)
+2020-02-23 12:02:45 DEBUG root:59 - Query String: SELECT count(*) FROM employees_proj_0 WHERE userid=?
+2020-02-23 12:02:45 DEBUG root:60 - UserID: userid
+2020-02-23 12:02:45 TRACE root:24 - createEmployee(Employee)
+2020-02-23 12:02:45 TRACE root:48 - recordExists(String,Character)
+2020-02-23 12:02:45 DEBUG root:59 - Query String: SELECT count(*) FROM employees_proj_0 WHERE userid=?
+2020-02-23 12:02:45 DEBUG root:60 - UserID: userid
+2020-02-23 12:02:45 TRACE root:115 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 12:02:45 DEBUG root:134 - EmployeeID: = null
+2020-02-23 12:03:53 TRACE root:24 - createEmployee(Employee)
+2020-02-23 12:03:53 TRACE root:48 - recordExists(String,Character)
+2020-02-23 12:03:53 DEBUG root:59 - Query String: SELECT count(*) FROM employees_proj_0 WHERE userid=?
+2020-02-23 12:03:53 DEBUG root:60 - UserID: userid
+2020-02-23 12:03:53 TRACE root:24 - createEmployee(Employee)
+2020-02-23 12:03:53 TRACE root:48 - recordExists(String,Character)
+2020-02-23 12:03:53 DEBUG root:59 - Query String: SELECT count(*) FROM employees_proj_0 WHERE userid=?
+2020-02-23 12:03:53 DEBUG root:60 - UserID: userid
+2020-02-23 12:03:53 TRACE root:115 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 12:03:53 DEBUG root:134 - EmployeeID: = null
+2020-02-23 12:04:43 TRACE root:48 - recordExists(String,Character)
+2020-02-23 12:04:43 DEBUG root:59 - Query String: SELECT count(*) FROM employees_proj_0 WHERE userid=?
+2020-02-23 12:04:43 DEBUG root:60 - UserID: userid
+2020-02-23 12:05:04 TRACE root:251 - removeVehicle(Vehicle)
+2020-02-23 12:05:04 TRACE root:48 - recordExists(String,Character)
+2020-02-23 12:05:04 DEBUG root:59 - Query String: SELECT count(*) FROM employees_proj_0 WHERE userid=?
+2020-02-23 12:05:04 DEBUG root:60 - UserID: userid
+2020-02-23 12:05:11 TRACE root:48 - recordExists(String,Character)
+2020-02-23 12:05:11 DEBUG root:59 - Query String: SELECT count(*) FROM employees_proj_0 WHERE userid=?
+2020-02-23 12:05:11 DEBUG root:60 - UserID: userid
+2020-02-23 12:06:49 TRACE root:48 - recordExists(String,Character)
+2020-02-23 12:06:49 DEBUG root:59 - Query String: SELECT count(*) FROM employees_proj_0 WHERE userid=?
+2020-02-23 12:06:49 DEBUG root:60 - UserID: userid

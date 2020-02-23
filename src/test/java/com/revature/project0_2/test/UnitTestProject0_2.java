@@ -31,12 +31,14 @@ public class UnitTestProject0_2 {
 		emp.firstName = "John";
 		emp.lastName = "Smith";
 		emp.address = "123 Ave.";
+		emp.email = "employee@email.com";
 		emp.userId = "userid";
 		emp.password = "password";
 		
 		cus.firstName = "John";
 		cus.lastName = "Smith";
 		cus.address = "123 Ave.";
+		cus.email = "customer@email.com";
 		cus.userId = "userid";
 		cus.password = "password";
 		cus.creditCard = 0;
@@ -64,10 +66,62 @@ public class UnitTestProject0_2 {
 	 * DealershipSystemWithSql
 	 */
 	@Test
-	public void createEmployee_getEmployee() {
+	public void createEmployee_getEmployeeDuplicate() {
+		String[] s = new String[5];
+		String[] sReturned = new String[5];
+		DealershipSystemWithSql.createEmployee(emp);
 		DealershipSystemWithSql.createEmployee(emp);
 		Employee empReturned = DealershipSystemWithSql.getEmployee(emp.userId);
-		assertEquals(emp,empReturned);
+		
+		s[0] = emp.firstName;
+		s[1] = emp.lastName;
+		s[2] = emp.address;
+		s[3] = emp.email;
+		s[4] = emp.userId;
+		s[5] = emp.password;
+
+		sReturned[0] = empReturned.firstName;
+		sReturned[1] = empReturned.lastName;
+		sReturned[2] = empReturned.address;
+		sReturned[3] = empReturned.email;
+		sReturned[4] = empReturned.userId;
+		sReturned[6] = empReturned.password;
+		assertArrayEquals(s,sReturned);
 	}
 
+	@Test
+	public void testRecordDoesExists() {
+		assertEquals(DealershipSystemWithSql.recordExists(emp.userId, 'E'), true);
+	}
+
+	@Test
+	public void createEmployee_getEmployee() {
+		DealershipSystemWithSql.removeEmployee(emp);
+		DealershipSystemWithSql.createEmployee(emp);
+		Employee empReturned = DealershipSystemWithSql.getEmployee(emp.userId);
+		String[] s = new String[6];
+		String[] sReturned = new String[5];
+
+		s[0] = emp.firstName;
+		s[1] = emp.lastName;
+		s[2] = emp.address;
+		s[3] = emp.email;
+		s[4] = emp.userId;
+		s[5] = emp.password;
+
+		sReturned[0] = empReturned.firstName;
+		sReturned[1] = empReturned.lastName;
+		sReturned[2] = empReturned.address;
+		sReturned[3] = empReturned.email;
+		sReturned[4] = empReturned.userId;
+		sReturned[6] = empReturned.password;
+
+		assertArrayEquals(s,sReturned);
+	}
+
+	@Test
+	public void testRecordDoesNotExists() {
+		DealershipSystemWithSql.removeEmployee(emp);
+		assertEquals(DealershipSystemWithSql.recordExists(emp.userId, 'E'), false);
+	}
 }
