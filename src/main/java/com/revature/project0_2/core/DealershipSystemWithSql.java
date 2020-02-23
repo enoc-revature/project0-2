@@ -49,11 +49,11 @@ public class DealershipSystemWithSql extends DealershipSystem{
 		Boolean duplicate = false;
 		String query = "";
 		switch(ch) {
-		case 'E': query = "SELECT count(*) FROM employees_proj_0 WHERE userid=?";
+		case 'E': query = "SELECT * FROM employees_proj_0 WHERE userid=?";
 					break;
-		case 'C': query = "SELECT count(*) FROM customers_proj_0 WHERE userid=?";
+		case 'C': query = "SELECT * FROM customers_proj_0 WHERE userid=?";
 					break;
-		case 'V': query = "SELECT count(*) FROM vehicles_proj_0 WHERE vin=?";
+		case 'V': query = "SELECT * FROM vehicles_proj_0 WHERE vin=?";
 					break;
 		}
 		log.debug("Query String: " + query);
@@ -62,8 +62,11 @@ public class DealershipSystemWithSql extends DealershipSystem{
 			PreparedStatement psCheckUnique = conn.prepareStatement(query);
 			psCheckUnique.setString(1, id);
 			ResultSet rsCheckUnique = psCheckUnique.executeQuery();
-			if(rsCheckUnique.next())
-				duplicate = true;
+			duplicate = rsCheckUnique.next();
+			if(duplicate) {
+				log.debug("Duplicate exists");
+				System.out.println("Duplicate exists");
+			}
 		} catch(SQLException err) {
 			err.printStackTrace();
 		}
@@ -73,18 +76,20 @@ public class DealershipSystemWithSql extends DealershipSystem{
 	public static void createCustomer(Customer c) {
 		log.trace("createCustomer(Customer)");
 		try (Connection conn = DriverManager.getConnection(credentials[0], credentials[1], credentials[2])) {
-			PreparedStatement ps = conn.prepareStatement(
-					"INSERT INTO customers_proj_0 " +
-					"(firstName,lastName,address,email,creditcard,userid,password) " +
-					"VALUES(?,?,?,?,?)");
-			ps.setString(1, c.firstName);
-			ps.setString(2, c.lastName);
-			ps.setString(3, c.address);
-			ps.setString(4, c.email);
-			ps.setInt(5, c.creditCard);
-			ps.setString(6, c.userId);
-			ps.setString(7, c.password);
-			ps.executeUpdate();
+			if(!recordExists(c.userId, 'C')) {
+				PreparedStatement ps = conn.prepareStatement(
+						"INSERT INTO customers_proj_0 " +
+						"(firstName,lastName,address,email,creditcard,userid,password) " +
+						"VALUES(?,?,?,?,?,?,?)");
+				ps.setString(1, c.firstName);
+				ps.setString(2, c.lastName);
+				ps.setString(3, c.address);
+				ps.setString(4, c.email);
+				ps.setString(5, c.creditCard);
+				ps.setString(6, c.userId);
+				ps.setString(7, c.password);
+				ps.executeUpdate();
+			} 
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -93,18 +98,25 @@ public class DealershipSystemWithSql extends DealershipSystem{
 	public static void createVehicle(Vehicle v) {
 		log.trace("createVehicle(Vehicle)");
 		try (Connection conn = DriverManager.getConnection(credentials[0], credentials[1], credentials[2])) {
+			if(!recordExists(v.vin, 'V')) {
 			PreparedStatement ps = conn.prepareStatement(
 					"INSERT INTO vehicles_proj_0 " +
-					"(make,model,year,mileage,mileage,condition,vin,bid) " +
-					"VALUES(?,?,?,?,?,?,?)");
+					"(make,model,year,mileage,vin,bid,highestOffer,highestBidderOrOwner,monthlyPayment,principle,paymentDuration,pended) " +
+					"VALUES(?,?,?,?,?,?,?,?,?,?,?,?)");
 			ps.setString(1, v.make);
 			ps.setString(2, v.model);
 			ps.setInt(3, v.year);
 			ps.setDouble(4, v.mileage);
-			//ps.setString(5, v.condition);
 			ps.setString(5, v.vin);
 			ps.setDouble(6, v.bid);
+			ps.setDouble(7, v.highestOffer);
+			ps.setString(8, v.highestBidderOrOwner);
+			ps.setDouble(9, v.monthlyPayment);
+			ps.setDouble(10, v.principle);
+			ps.setInt(11, v.paymentDuration);
+			ps.setBoolean(12, v.pended);
 			ps.executeUpdate();
+			}
 		} catch (SQLException err) {
 			err.printStackTrace();
 		}
@@ -125,6 +137,7 @@ public class DealershipSystemWithSql extends DealershipSystem{
 				e.firstName = rs.getString("firstName");
 				e.lastName = rs.getString("lastName");
 				e.address = rs.getString("address");
+				e.email = rs.getString("email");
 				e.userId = rs.getString("userid");
 				e.password = rs.getString("password");
 			}
@@ -140,16 +153,20 @@ public class DealershipSystemWithSql extends DealershipSystem{
 		Customer c = new Customer();
 		try (Connection conn = DriverManager.getConnection(credentials[0], credentials[1], credentials[2])) {
 			String query =
-					"SELECT * FROM employees_proj_0 " +
-					"WHERE employeeid = ?";
+					"SELECT * FROM customers_proj_0 " +
+					"WHERE userid = ?";
 			PreparedStatement ps = conn.prepareStatement(query);
 			ps.setString(1, id);
 			ResultSet rs = ps.executeQuery();
-			c.firstName = rs.getString("firstName");
-			c.lastName = rs.getString("lastName");
-			c.address = rs.getString("address");
-			c.userId = rs.getString("userid");
-			c.password = rs.getString("password");
+			while(rs.next()) {
+				c.firstName = rs.getString("firstName");
+				c.lastName = rs.getString("lastName");
+				c.address = rs.getString("address");
+				c.userId = rs.getString("userid");
+				c.password = rs.getString("password");
+				c.email = rs.getString("email");
+				c.creditCard = rs.getString("creditCard");
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -166,14 +183,20 @@ public class DealershipSystemWithSql extends DealershipSystem{
 			PreparedStatement ps = conn.prepareStatement(query);
 			ps.setString(1, vin);
 			ResultSet rs = ps.executeQuery();
-			v.make = rs.getString("make");
-			v.model = rs.getString("model");
-			v.year = rs.getInt("year");
-			v.highestOffer = rs.getDouble("highestOffer");
-			v.mileage = rs.getDouble("mileage");
-			//v.condition = rs.getString("condition");
-			v.bid = rs.getDouble("bid");
-			v.vin = rs.getString("vin");
+			while(rs.next()) {
+				v.make = rs.getString("make");
+				v.model = rs.getString("model");
+				v.year = rs.getInt("year");
+				v.mileage = rs.getDouble("mileage");
+				v.vin = rs.getString("vin");
+				v.bid = rs.getDouble("bid");
+				v.highestOffer = rs.getDouble("highestOffer");
+				v.highestBidderOrOwner = rs.getString("highestBidderOrOwner");
+				v.monthlyPayment = rs.getDouble("monthlyPayment");
+				v.principle = rs.getDouble("principle");
+				v.paymentDuration = rs.getInt("paymentDuration");
+				v.pended = rs.getBoolean("pended");
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

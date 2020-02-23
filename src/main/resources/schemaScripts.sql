@@ -3,7 +3,7 @@ CREATE TABLE employees_proj_0(
 firstName VARCHAR,
 lastName VARCHAR,
 address VARCHAR,
-email VARCHAR UNIQUE NOT NULL,
+email VARCHAR NOT NULL,
 userid VARCHAR,
 password VARCHAR NOT NULL,
 PRIMARY KEY(userid)
@@ -14,8 +14,8 @@ CREATE TABLE customers_proj_0(
 firstName VARCHAR,
 lastName VARCHAR,
 address VARCHAR,
-email VARCHAR UNIQUE NOT NULL,
-creditcard numeric(16,0),
+email VARCHAR NOT NULL,
+creditcard char(16),
 userid VARCHAR,
 password VARCHAR NOT NULL,
 PRIMARY KEY(userid)
