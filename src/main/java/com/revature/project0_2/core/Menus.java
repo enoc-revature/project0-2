@@ -385,7 +385,7 @@ public class Menus {
 					v.highestOffer = null;
 					v.pended = true;
 					v.paymentDuration = 60;
-					v.monthlyPayment = DealershipSystemWithSql.calculatePayments(v.principle, v.paymentDuration);
+					v.monthlyPayment = DealershipSystemWithSql.calculatePayments(v.principle);
 					DealershipSystemWithSql.save(v);
 				}
 			} else {

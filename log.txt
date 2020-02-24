@@ -1603,3 +1603,937 @@
 2020-02-23 18:38:39 TRACE root:48 - recordExists(String,Character)
 2020-02-23 18:38:39 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
 2020-02-23 18:38:39 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 18:47:17 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 18:47:18 TRACE root:48 - recordExists(String,Character)
+2020-02-23 18:47:18 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 18:47:18 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 18:47:18 TRACE root:207 - DealershipSystemWithSql.getVehicles()
+2020-02-23 19:39:16 TRACE root:237 - updateOffer(Vehicle)
+2020-02-23 19:39:16 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 19:41:05 TRACE root:237 - updateOffer(Vehicle)
+2020-02-23 19:41:05 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 19:55:09 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 19:55:09 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 19:55:09 TRACE root:48 - recordExists(String,Character)
+2020-02-23 19:55:09 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 19:55:09 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 19:55:09 TRACE root:254 - updateVehicleSold(Vehicle)
+2020-02-23 19:55:09 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:08:53 TRACE root:314 - calculatePayments(Double, Integer)
+2020-02-23 20:09:17 TRACE root:314 - calculatePayments(Double, Integer)
+2020-02-23 20:10:17 TRACE root:314 - calculatePayments(Double, Integer)
+2020-02-23 20:10:28 TRACE root:314 - calculatePayments(Double, Integer)
+2020-02-23 20:12:05 TRACE root:314 - calculatePayments(Double, Integer)
+2020-02-23 20:13:59 TRACE root:314 - calculatePayments(Double, Integer)
+2020-02-23 20:14:19 TRACE root:314 - calculatePayments(Double, Integer)
+2020-02-23 20:16:43 TRACE root:314 - calculatePayments(Double, Integer)
+2020-02-23 20:16:56 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:16:56 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:16:56 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:16:56 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:16:56 DEBUG root:67 - Duplicate exists
+2020-02-23 20:16:56 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:16:56 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:16:56 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:16:56 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:16:56 DEBUG root:67 - Duplicate exists
+2020-02-23 20:16:56 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:16:56 TRACE root:314 - calculatePayments(Double, Integer)
+2020-02-23 20:16:56 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:16:56 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:16:56 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:16:56 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:16:56 DEBUG root:67 - Duplicate exists
+2020-02-23 20:16:56 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:16:56 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:16:56 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:16:56 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:16:56 DEBUG root:67 - Duplicate exists
+2020-02-23 20:16:56 TRACE root:127 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 20:16:56 DEBUG root:147 - EmployeeID: = TEST_USERID
+2020-02-23 20:16:56 TRACE root:237 - updateOffer(Vehicle)
+2020-02-23 20:16:56 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:16:56 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:16:56 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:16:56 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:16:56 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:16:56 DEBUG root:67 - Duplicate exists
+2020-02-23 20:16:56 TRACE root:207 - DealershipSystemWithSql.getVehicles()
+2020-02-23 20:16:56 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:16:56 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:16:56 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:16:56 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:16:56 DEBUG root:67 - Duplicate exists
+2020-02-23 20:16:56 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:16:56 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:16:56 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:16:56 DEBUG root:67 - Duplicate exists
+2020-02-23 20:16:56 TRACE root:288 - removeVehicle(Vehicle)
+2020-02-23 20:16:56 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:16:56 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:16:56 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:16:56 TRACE root:275 - removeVehicle(Vehicle)
+2020-02-23 20:16:56 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:16:56 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:16:56 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:16:56 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:16:56 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:16:56 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:16:56 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:16:56 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:16:56 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:16:56 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:16:56 DEBUG root:67 - Duplicate exists
+2020-02-23 20:16:57 TRACE root:275 - removeVehicle(Vehicle)
+2020-02-23 20:16:57 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:16:57 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:16:57 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:16:57 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:16:57 TRACE root:127 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 20:16:57 DEBUG root:147 - EmployeeID: = TEST_USERID
+2020-02-23 20:16:57 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:16:57 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:16:57 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:16:57 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:16:57 DEBUG root:67 - Duplicate exists
+2020-02-23 20:16:57 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:16:57 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:16:57 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:16:57 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:16:57 DEBUG root:67 - Duplicate exists
+2020-02-23 20:16:57 TRACE root:152 - DealershipSystemWithSql.getCustomer(String id)
+2020-02-23 20:16:57 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:16:57 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:16:57 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:16:57 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:16:57 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:16:57 TRACE root:254 - updateVehicleSold(Vehicle)
+2020-02-23 20:16:57 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:16:57 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:16:57 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:16:57 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:16:57 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:16:57 DEBUG root:67 - Duplicate exists
+2020-02-23 20:16:57 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:16:57 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:16:57 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:16:57 DEBUG root:67 - Duplicate exists
+2020-02-23 20:16:57 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:16:57 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:16:57 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:16:57 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:16:57 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:16:57 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:16:57 TRACE root:288 - removeVehicle(Vehicle)
+2020-02-23 20:16:57 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:16:57 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:16:57 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:16:57 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:16:57 TRACE root:152 - DealershipSystemWithSql.getCustomer(String id)
+2020-02-23 20:16:57 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:16:57 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:16:57 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:16:57 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:17:06 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:17:06 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:17:06 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:17:06 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:17:06 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:17:06 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:17:06 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:17:06 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:17:06 DEBUG root:67 - Duplicate exists
+2020-02-23 20:17:06 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:17:19 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:17:19 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:17:19 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:17:19 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:17:19 DEBUG root:67 - Duplicate exists
+2020-02-23 20:17:19 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:17:19 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:17:19 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:17:19 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:17:19 DEBUG root:67 - Duplicate exists
+2020-02-23 20:17:19 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:17:22 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:17:23 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:17:23 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:17:23 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:17:23 DEBUG root:67 - Duplicate exists
+2020-02-23 20:17:23 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:17:23 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:17:23 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:17:23 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:17:23 DEBUG root:67 - Duplicate exists
+2020-02-23 20:17:23 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:17:23 TRACE root:314 - calculatePayments(Double, Integer)
+2020-02-23 20:17:23 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:17:23 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:17:23 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:17:23 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:17:23 DEBUG root:67 - Duplicate exists
+2020-02-23 20:17:23 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:17:23 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:17:23 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:17:23 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:17:23 DEBUG root:67 - Duplicate exists
+2020-02-23 20:17:23 TRACE root:127 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 20:17:23 DEBUG root:147 - EmployeeID: = TEST_USERID
+2020-02-23 20:17:23 TRACE root:237 - updateOffer(Vehicle)
+2020-02-23 20:17:23 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:17:23 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:17:23 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:17:23 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:17:23 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:17:23 DEBUG root:67 - Duplicate exists
+2020-02-23 20:17:23 TRACE root:207 - DealershipSystemWithSql.getVehicles()
+2020-02-23 20:17:23 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:17:23 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:17:23 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:17:23 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:17:23 DEBUG root:67 - Duplicate exists
+2020-02-23 20:17:23 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:17:23 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:17:23 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:17:23 DEBUG root:67 - Duplicate exists
+2020-02-23 20:17:23 TRACE root:288 - removeVehicle(Vehicle)
+2020-02-23 20:17:23 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:17:23 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:17:23 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:17:23 TRACE root:275 - removeVehicle(Vehicle)
+2020-02-23 20:17:23 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:17:23 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:17:23 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:17:23 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:17:23 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:17:23 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:17:23 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:17:23 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:17:23 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:17:23 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:17:23 DEBUG root:67 - Duplicate exists
+2020-02-23 20:17:23 TRACE root:275 - removeVehicle(Vehicle)
+2020-02-23 20:17:23 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:17:23 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:17:23 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:17:23 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:17:23 TRACE root:127 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 20:17:23 DEBUG root:147 - EmployeeID: = TEST_USERID
+2020-02-23 20:17:23 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:17:23 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:17:23 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:17:23 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:17:23 DEBUG root:67 - Duplicate exists
+2020-02-23 20:17:23 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:17:23 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:17:23 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:17:23 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:17:23 DEBUG root:67 - Duplicate exists
+2020-02-23 20:17:23 TRACE root:152 - DealershipSystemWithSql.getCustomer(String id)
+2020-02-23 20:17:23 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:17:23 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:17:24 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:17:24 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:17:24 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:17:24 TRACE root:254 - updateVehicleSold(Vehicle)
+2020-02-23 20:17:24 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:17:24 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:17:24 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:17:24 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:17:24 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:17:24 DEBUG root:67 - Duplicate exists
+2020-02-23 20:17:24 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:17:24 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:17:24 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:17:24 DEBUG root:67 - Duplicate exists
+2020-02-23 20:17:24 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:17:24 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:17:24 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:17:24 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:17:24 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:17:24 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:17:24 TRACE root:288 - removeVehicle(Vehicle)
+2020-02-23 20:17:24 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:17:24 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:17:24 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:17:24 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:17:24 TRACE root:152 - DealershipSystemWithSql.getCustomer(String id)
+2020-02-23 20:17:24 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:17:24 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:17:24 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:17:24 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:18:27 TRACE root:288 - removeVehicle(Vehicle)
+2020-02-23 20:18:27 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:18:27 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:18:27 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:20:54 TRACE root:288 - removeVehicle(Vehicle)
+2020-02-23 20:20:55 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:20:55 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:20:55 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:20:55 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:20:55 TRACE root:152 - DealershipSystemWithSql.getCustomer(String id)
+2020-02-23 20:20:55 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:20:55 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:20:55 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:20:55 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:20:55 DEBUG root:67 - Duplicate exists
+2020-02-23 20:20:55 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:20:55 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:20:55 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:20:55 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:20:55 DEBUG root:67 - Duplicate exists
+2020-02-23 20:20:55 TRACE root:152 - DealershipSystemWithSql.getCustomer(String id)
+2020-02-23 20:20:55 TRACE root:275 - removeVehicle(Vehicle)
+2020-02-23 20:20:55 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:20:55 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:20:55 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:20:55 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:20:55 TRACE root:127 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 20:20:55 DEBUG root:147 - EmployeeID: = TEST_USERID
+2020-02-23 20:20:55 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:20:55 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:20:55 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:20:55 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:20:55 DEBUG root:67 - Duplicate exists
+2020-02-23 20:20:55 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:20:55 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:20:55 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:20:55 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:20:55 DEBUG root:67 - Duplicate exists
+2020-02-23 20:20:55 TRACE root:127 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 20:20:55 DEBUG root:147 - EmployeeID: = TEST_USERID
+2020-02-23 20:20:55 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:20:55 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:20:55 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:20:55 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:20:55 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:20:55 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:20:55 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:20:55 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:20:55 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:20:55 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:20:55 DEBUG root:67 - Duplicate exists
+2020-02-23 20:20:55 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:20:55 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:20:55 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:20:55 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:20:55 DEBUG root:67 - Duplicate exists
+2020-02-23 20:20:55 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:20:55 TRACE root:314 - calculatePayments(Double, Integer)
+2020-02-23 20:20:55 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:20:55 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:20:55 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:20:55 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:20:55 DEBUG root:67 - Duplicate exists
+2020-02-23 20:20:55 TRACE root:207 - DealershipSystemWithSql.getVehicles()
+2020-02-23 20:20:55 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:20:55 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:20:55 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:20:55 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:20:55 DEBUG root:67 - Duplicate exists
+2020-02-23 20:20:55 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:20:55 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:20:55 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:20:56 DEBUG root:67 - Duplicate exists
+2020-02-23 20:20:56 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:20:56 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:20:56 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:20:56 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:20:56 DEBUG root:67 - Duplicate exists
+2020-02-23 20:20:56 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:20:56 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:20:56 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:20:56 DEBUG root:67 - Duplicate exists
+2020-02-23 20:20:56 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:20:56 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:20:56 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:20:56 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:20:56 DEBUG root:67 - Duplicate exists
+2020-02-23 20:20:56 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:20:56 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:20:56 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:20:56 DEBUG root:67 - Duplicate exists
+2020-02-23 20:20:56 TRACE root:288 - removeVehicle(Vehicle)
+2020-02-23 20:20:56 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:20:56 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:20:56 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:20:56 TRACE root:275 - removeVehicle(Vehicle)
+2020-02-23 20:20:56 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:20:56 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:20:56 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:20:56 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:20:56 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:20:56 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:20:56 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:20:56 TRACE root:237 - updateOffer(Vehicle)
+2020-02-23 20:20:56 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:20:56 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:20:56 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:20:56 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:20:56 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:20:56 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:20:56 TRACE root:254 - updateVehicleSold(Vehicle)
+2020-02-23 20:20:56 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:21:30 TRACE root:288 - removeVehicle(Vehicle)
+2020-02-23 20:21:30 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:21:30 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:21:30 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:21:30 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:21:30 TRACE root:152 - DealershipSystemWithSql.getCustomer(String id)
+2020-02-23 20:21:31 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:21:31 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:21:31 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:21:31 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:21:31 DEBUG root:67 - Duplicate exists
+2020-02-23 20:21:31 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:21:31 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:21:31 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:21:31 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:21:31 DEBUG root:67 - Duplicate exists
+2020-02-23 20:21:31 TRACE root:152 - DealershipSystemWithSql.getCustomer(String id)
+2020-02-23 20:21:31 TRACE root:275 - removeVehicle(Vehicle)
+2020-02-23 20:21:31 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:21:31 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:21:31 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:21:31 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:21:31 TRACE root:127 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 20:21:31 DEBUG root:147 - EmployeeID: = TEST_USERID
+2020-02-23 20:21:31 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:21:31 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:21:31 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:21:31 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:21:31 DEBUG root:67 - Duplicate exists
+2020-02-23 20:21:31 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:21:31 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:21:31 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:21:31 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:21:31 DEBUG root:67 - Duplicate exists
+2020-02-23 20:21:31 TRACE root:127 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 20:21:31 DEBUG root:147 - EmployeeID: = TEST_USERID
+2020-02-23 20:21:31 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:21:31 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:21:31 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:21:31 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:21:31 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:21:31 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:21:31 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:21:31 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:21:31 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:21:31 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:21:31 DEBUG root:67 - Duplicate exists
+2020-02-23 20:21:31 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:21:31 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:21:31 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:21:31 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:21:31 DEBUG root:67 - Duplicate exists
+2020-02-23 20:21:31 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:21:31 TRACE root:314 - calculatePayments(Double, Integer)
+2020-02-23 20:21:31 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:21:31 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:21:31 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:21:31 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:21:31 DEBUG root:67 - Duplicate exists
+2020-02-23 20:21:31 TRACE root:207 - DealershipSystemWithSql.getVehicles()
+2020-02-23 20:21:31 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:21:31 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:21:31 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:21:31 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:21:31 DEBUG root:67 - Duplicate exists
+2020-02-23 20:21:31 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:21:31 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:21:31 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:21:31 DEBUG root:67 - Duplicate exists
+2020-02-23 20:21:31 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:21:31 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:21:31 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:21:31 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:21:31 DEBUG root:67 - Duplicate exists
+2020-02-23 20:21:31 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:21:31 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:21:31 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:21:31 DEBUG root:67 - Duplicate exists
+2020-02-23 20:21:31 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:21:31 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:21:31 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:21:31 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:21:31 DEBUG root:67 - Duplicate exists
+2020-02-23 20:21:31 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:21:31 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:21:31 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:21:31 DEBUG root:67 - Duplicate exists
+2020-02-23 20:21:31 TRACE root:288 - removeVehicle(Vehicle)
+2020-02-23 20:21:31 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:21:31 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:21:31 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:21:32 TRACE root:275 - removeVehicle(Vehicle)
+2020-02-23 20:21:32 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:21:32 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:21:32 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:21:32 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:21:32 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:21:32 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:21:32 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:21:32 TRACE root:237 - updateOffer(Vehicle)
+2020-02-23 20:21:32 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:21:32 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:21:32 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:21:32 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:21:32 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:21:32 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:21:32 TRACE root:254 - updateVehicleSold(Vehicle)
+2020-02-23 20:21:32 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:22:44 TRACE root:237 - updateOffer(Vehicle)
+2020-02-23 20:22:44 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:23:28 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:23:28 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:28 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:23:28 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:23:28 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:23:28 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:28 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:23:28 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:23:28 DEBUG root:67 - Duplicate exists
+2020-02-23 20:23:28 TRACE root:127 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 20:23:28 DEBUG root:147 - EmployeeID: = TEST_USERID
+2020-02-23 20:23:28 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:23:29 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:29 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:23:29 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:23:29 DEBUG root:67 - Duplicate exists
+2020-02-23 20:23:29 TRACE root:207 - DealershipSystemWithSql.getVehicles()
+2020-02-23 20:23:29 TRACE root:237 - updateOffer(Vehicle)
+2020-02-23 20:23:29 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:23:29 TRACE root:275 - removeVehicle(Vehicle)
+2020-02-23 20:23:29 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:29 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:23:29 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:23:29 TRACE root:288 - removeVehicle(Vehicle)
+2020-02-23 20:23:29 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:23:29 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:29 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:23:29 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:23:29 TRACE root:152 - DealershipSystemWithSql.getCustomer(String id)
+2020-02-23 20:23:29 TRACE root:288 - removeVehicle(Vehicle)
+2020-02-23 20:23:29 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:29 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:23:29 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:23:29 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:23:29 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:29 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:23:29 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:23:29 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:29 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:23:29 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:23:29 DEBUG root:67 - Duplicate exists
+2020-02-23 20:23:29 TRACE root:275 - removeVehicle(Vehicle)
+2020-02-23 20:23:29 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:23:29 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:29 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:23:29 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:23:29 TRACE root:127 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 20:23:29 DEBUG root:147 - EmployeeID: = TEST_USERID
+2020-02-23 20:23:29 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:23:29 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:29 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:23:29 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:23:29 TRACE root:314 - calculatePayments(Double, Integer)
+2020-02-23 20:23:29 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:23:29 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:29 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:23:29 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:23:29 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:29 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:23:29 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:23:29 DEBUG root:67 - Duplicate exists
+2020-02-23 20:23:29 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:23:29 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:23:29 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:29 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:23:29 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:23:29 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:23:29 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:23:29 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:29 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:23:29 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:23:29 DEBUG root:67 - Duplicate exists
+2020-02-23 20:23:29 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:29 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:23:29 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:23:29 DEBUG root:67 - Duplicate exists
+2020-02-23 20:23:29 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:23:30 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:23:30 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:30 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:23:30 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:23:30 TRACE root:254 - updateVehicleSold(Vehicle)
+2020-02-23 20:23:30 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:23:30 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:23:30 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:30 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:23:30 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:23:30 DEBUG root:67 - Duplicate exists
+2020-02-23 20:23:30 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:23:30 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:30 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:23:30 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:23:30 DEBUG root:67 - Duplicate exists
+2020-02-23 20:23:30 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:23:30 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:23:30 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:30 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:23:30 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:23:30 DEBUG root:67 - Duplicate exists
+2020-02-23 20:23:30 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:23:30 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:30 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:23:30 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:23:30 DEBUG root:67 - Duplicate exists
+2020-02-23 20:23:30 TRACE root:152 - DealershipSystemWithSql.getCustomer(String id)
+2020-02-23 20:23:35 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:23:35 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:35 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:23:35 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:23:35 DEBUG root:67 - Duplicate exists
+2020-02-23 20:23:35 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:23:35 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:35 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:23:35 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:23:35 DEBUG root:67 - Duplicate exists
+2020-02-23 20:23:35 TRACE root:127 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 20:23:35 DEBUG root:147 - EmployeeID: = TEST_USERID
+2020-02-23 20:23:35 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:23:35 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:35 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:23:35 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:23:35 DEBUG root:67 - Duplicate exists
+2020-02-23 20:23:35 TRACE root:207 - DealershipSystemWithSql.getVehicles()
+2020-02-23 20:23:35 TRACE root:237 - updateOffer(Vehicle)
+2020-02-23 20:23:35 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:23:35 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:23:35 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:35 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:23:35 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:23:35 DEBUG root:67 - Duplicate exists
+2020-02-23 20:23:35 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:35 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:23:35 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:23:35 DEBUG root:67 - Duplicate exists
+2020-02-23 20:23:35 TRACE root:288 - removeVehicle(Vehicle)
+2020-02-23 20:23:35 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:23:35 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:35 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:23:35 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:23:35 TRACE root:152 - DealershipSystemWithSql.getCustomer(String id)
+2020-02-23 20:23:35 TRACE root:275 - removeVehicle(Vehicle)
+2020-02-23 20:23:35 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:35 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:23:35 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:23:35 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:23:35 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:35 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:23:35 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:23:35 TRACE root:275 - removeVehicle(Vehicle)
+2020-02-23 20:23:35 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:23:36 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:36 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:23:36 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:23:36 TRACE root:127 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 20:23:36 DEBUG root:147 - EmployeeID: = TEST_USERID
+2020-02-23 20:23:36 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:23:36 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:23:36 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:36 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:23:36 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:23:36 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:23:36 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:23:36 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:36 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:23:36 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:23:36 DEBUG root:67 - Duplicate exists
+2020-02-23 20:23:36 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:36 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:23:36 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:23:36 DEBUG root:67 - Duplicate exists
+2020-02-23 20:23:36 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:23:36 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:36 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:23:36 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:23:36 DEBUG root:67 - Duplicate exists
+2020-02-23 20:23:36 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:36 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:23:36 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:23:36 DEBUG root:67 - Duplicate exists
+2020-02-23 20:23:36 TRACE root:288 - removeVehicle(Vehicle)
+2020-02-23 20:23:36 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:36 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:23:36 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:23:36 TRACE root:314 - calculatePayments(Double, Integer)
+2020-02-23 20:23:36 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:23:36 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:23:36 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:36 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:23:36 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:23:36 TRACE root:254 - updateVehicleSold(Vehicle)
+2020-02-23 20:23:36 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:23:36 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:23:36 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:36 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:23:36 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:23:36 DEBUG root:67 - Duplicate exists
+2020-02-23 20:23:36 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:23:36 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:36 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:23:36 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:23:36 DEBUG root:67 - Duplicate exists
+2020-02-23 20:23:36 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:23:36 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:23:36 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:36 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:23:36 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:23:36 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:23:36 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:36 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:23:36 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:23:36 DEBUG root:67 - Duplicate exists
+2020-02-23 20:23:36 TRACE root:152 - DealershipSystemWithSql.getCustomer(String id)
+2020-02-23 20:23:44 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:23:44 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:23:44 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:23:44 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:23:44 DEBUG root:67 - Duplicate exists
+2020-02-23 20:23:44 TRACE root:207 - DealershipSystemWithSql.getVehicles()
+2020-02-23 20:24:31 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:24:31 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:24:31 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:24:31 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:24:31 DEBUG root:67 - Duplicate exists
+2020-02-23 20:24:31 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:24:31 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:24:31 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:24:31 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:24:31 DEBUG root:67 - Duplicate exists
+2020-02-23 20:24:31 TRACE root:152 - DealershipSystemWithSql.getCustomer(String id)
+2020-02-23 20:24:31 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:24:31 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:24:31 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:24:31 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:24:31 DEBUG root:67 - Duplicate exists
+2020-02-23 20:24:31 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:24:31 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:24:31 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:24:31 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:24:31 DEBUG root:67 - Duplicate exists
+2020-02-23 20:24:31 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:24:31 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:24:31 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:24:31 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:24:31 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:24:31 DEBUG root:67 - Duplicate exists
+2020-02-23 20:24:31 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:24:31 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:24:31 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:24:31 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:24:31 DEBUG root:67 - Duplicate exists
+2020-02-23 20:24:31 TRACE root:127 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 20:24:31 DEBUG root:147 - EmployeeID: = TEST_USERID
+2020-02-23 20:24:31 TRACE root:237 - updateOffer(Vehicle)
+2020-02-23 20:24:31 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:24:31 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:24:31 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:24:31 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:24:31 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:24:31 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:24:31 TRACE root:207 - DealershipSystemWithSql.getVehicles()
+2020-02-23 20:24:31 TRACE root:275 - removeVehicle(Vehicle)
+2020-02-23 20:24:31 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:24:31 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:24:31 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:24:31 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:24:31 TRACE root:127 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 20:24:31 DEBUG root:147 - EmployeeID: = TEST_USERID
+2020-02-23 20:24:31 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:24:31 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:24:32 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:24:32 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:24:32 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:24:32 TRACE root:254 - updateVehicleSold(Vehicle)
+2020-02-23 20:24:32 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:24:32 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:24:32 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:24:32 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:24:32 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:24:32 DEBUG root:67 - Duplicate exists
+2020-02-23 20:24:32 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:24:32 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:24:32 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:24:32 DEBUG root:67 - Duplicate exists
+2020-02-23 20:24:32 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:24:32 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:24:32 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:24:32 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:24:32 DEBUG root:67 - Duplicate exists
+2020-02-23 20:24:32 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:24:32 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:24:32 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:24:32 DEBUG root:67 - Duplicate exists
+2020-02-23 20:24:32 TRACE root:314 - calculatePayments(Double, Integer)
+2020-02-23 20:24:32 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:24:32 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:24:32 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:24:32 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:24:32 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:24:32 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:24:32 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:24:32 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:24:32 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:24:32 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:24:32 DEBUG root:67 - Duplicate exists
+2020-02-23 20:24:32 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:24:32 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:24:32 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:24:32 DEBUG root:67 - Duplicate exists
+2020-02-23 20:24:32 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:24:32 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:24:32 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:24:32 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:24:32 TRACE root:288 - removeVehicle(Vehicle)
+2020-02-23 20:24:32 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:24:32 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:24:32 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:24:32 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:24:32 TRACE root:152 - DealershipSystemWithSql.getCustomer(String id)
+2020-02-23 20:24:32 TRACE root:288 - removeVehicle(Vehicle)
+2020-02-23 20:24:32 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:24:32 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:24:32 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:24:32 TRACE root:275 - removeVehicle(Vehicle)
+2020-02-23 20:24:32 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:24:32 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:24:32 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:24:47 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:24:47 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:24:47 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:24:47 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:24:47 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:24:47 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:24:47 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:24:47 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:24:47 DEBUG root:67 - Duplicate exists
+2020-02-23 20:24:47 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:25:18 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:25:18 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:25:19 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:25:19 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:25:19 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:25:19 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:25:19 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:25:19 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:25:19 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:25:19 DEBUG root:67 - Duplicate exists
+2020-02-23 20:25:19 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:25:21 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:25:22 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:25:22 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:25:22 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:25:22 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:25:22 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:25:22 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:25:22 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:25:22 DEBUG root:67 - Duplicate exists
+2020-02-23 20:25:22 TRACE root:127 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 20:25:22 DEBUG root:147 - EmployeeID: = TEST_USERID
+2020-02-23 20:25:22 TRACE root:237 - updateOffer(Vehicle)
+2020-02-23 20:25:22 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:25:22 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:25:22 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:25:22 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:25:22 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:25:22 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:25:22 TRACE root:207 - DealershipSystemWithSql.getVehicles()
+2020-02-23 20:25:22 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:25:22 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:25:22 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:25:22 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:25:22 DEBUG root:67 - Duplicate exists
+2020-02-23 20:25:22 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:25:22 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:25:22 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:25:22 DEBUG root:67 - Duplicate exists
+2020-02-23 20:25:22 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:25:22 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:25:22 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:25:22 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:25:22 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:25:22 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:25:22 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:25:22 DEBUG root:67 - Duplicate exists
+2020-02-23 20:25:22 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:25:22 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:25:22 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:25:22 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:25:22 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:25:22 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:25:22 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:25:22 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:25:22 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:25:22 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:25:22 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:25:22 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:25:22 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:25:22 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:25:22 DEBUG root:67 - Duplicate exists
+2020-02-23 20:25:22 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:25:22 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:25:22 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:25:22 DEBUG root:67 - Duplicate exists
+2020-02-23 20:25:22 TRACE root:275 - removeVehicle(Vehicle)
+2020-02-23 20:25:22 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:25:22 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:25:22 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:25:23 TRACE root:314 - calculatePayments(Double, Integer)
+2020-02-23 20:25:23 TRACE root:288 - removeVehicle(Vehicle)
+2020-02-23 20:25:23 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:25:23 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:25:23 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:25:23 TRACE root:288 - removeVehicle(Vehicle)
+2020-02-23 20:25:23 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:25:23 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:25:23 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:25:23 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:25:23 TRACE root:152 - DealershipSystemWithSql.getCustomer(String id)
+2020-02-23 20:25:23 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:25:23 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:25:23 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:25:23 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:25:23 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:25:23 TRACE root:254 - updateVehicleSold(Vehicle)
+2020-02-23 20:25:23 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)
+2020-02-23 20:25:23 TRACE root:275 - removeVehicle(Vehicle)
+2020-02-23 20:25:23 TRACE root:24 - createEmployee(Employee)
+2020-02-23 20:25:23 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:25:23 DEBUG root:59 - Query String: SELECT * FROM employees_proj_0 WHERE userid=?
+2020-02-23 20:25:23 DEBUG root:60 - UserID: TEST_USERID
+2020-02-23 20:25:23 TRACE root:127 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-23 20:25:23 DEBUG root:147 - EmployeeID: = TEST_USERID
+2020-02-23 20:25:23 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:25:23 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:25:23 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:25:23 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:25:23 DEBUG root:67 - Duplicate exists
+2020-02-23 20:25:23 TRACE root:77 - createCustomer(Customer)
+2020-02-23 20:25:23 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:25:23 DEBUG root:59 - Query String: SELECT * FROM customers_proj_0 WHERE userid=?
+2020-02-23 20:25:23 DEBUG root:60 - UserID: TEST_CUSTID
+2020-02-23 20:25:23 DEBUG root:67 - Duplicate exists
+2020-02-23 20:25:23 TRACE root:152 - DealershipSystemWithSql.getCustomer(String id)
+2020-02-23 20:25:23 TRACE root:301 - removeVehicle(Vehicle)
+2020-02-23 20:25:23 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:25:23 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:25:23 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:25:23 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:25:23 TRACE root:99 - createVehicle(Vehicle)
+2020-02-23 20:25:23 TRACE root:48 - recordExists(String,Character)
+2020-02-23 20:25:23 DEBUG root:59 - Query String: SELECT * FROM vehicles_proj_0 WHERE vin=?
+2020-02-23 20:25:23 DEBUG root:60 - UserID: TEST_VIN9999
+2020-02-23 20:25:23 DEBUG root:67 - Duplicate exists
+2020-02-23 20:25:23 TRACE root:177 - DealershipSystemWithSql.getVehicles(String)

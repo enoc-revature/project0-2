@@ -2,15 +2,21 @@ package com.revature.project0_2.test;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+
 import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
+import org.junit.runners.MethodSorters;
 import org.junit.Test;
 import com.revature.project0_2.core.*;
 import com.revature.project0_2.core.DealershipSystemWithSql;
 
+//@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@FixMethodOrder(MethodSorters.JVM)
 public class UnitTestProject0_2 {
 	private static Logger log = Logger.getRootLogger();
 
@@ -199,6 +205,7 @@ public class UnitTestProject0_2 {
 	 */
 	@Test
 	public void createVehicle_getVehicleDuplicate() {
+		DealershipSystemWithSql.removeVehicle(veh);
 		String[] s = new String[12];
 		String[] sReturned = new String[12];
 		DealershipSystemWithSql.createVehicle(veh);
@@ -280,5 +287,144 @@ public class UnitTestProject0_2 {
 	public void testRecordDoesNotExistsVehicle() {
 		DealershipSystemWithSql.removeVehicle(veh);
 		assertEquals(false, DealershipSystemWithSql.recordExists(veh.vin, 'V'));
+	}
+	
+	@Test
+	public void testGetVehicles() {
+		DealershipSystemWithSql.removeVehicle(veh);
+		ArrayList<Vehicle> vList = null;
+		DealershipSystemWithSql.createVehicle(veh);
+		vList = DealershipSystemWithSql.getVehicles();
+		String[] s = new String[12];
+		String[] sReturned = new String[12];
+
+		s[0] = veh.make;
+		s[1] = veh.model;
+		s[2] = Integer.toString(veh.year);
+		s[3] = Double.toString(veh.mileage);
+		s[4] = veh.vin;
+		s[5] = Double.toString(veh.bid);
+		s[6] = Double.toString(veh.highestOffer);
+		s[7] = veh.highestBidderOrOwner;
+		s[8] = Double.toString(veh.monthlyPayment);
+		s[9] = Double.toString(veh.principle);
+		s[10] = Integer.toString(veh.paymentDuration);
+		s[11] = Boolean.toString(veh.pended);
+
+		sReturned[0] = vList.get(0).make;
+		sReturned[1] = vList.get(0).model;
+		sReturned[2] = Integer.toString(vList.get(0).year);
+		sReturned[3] = Double.toString(vList.get(0).mileage);
+		sReturned[4] = vList.get(0).vin;
+		sReturned[5] = Double.toString(vList.get(0).bid);
+		sReturned[6] = Double.toString(vList.get(0).highestOffer);
+		sReturned[7] = vList.get(0).highestBidderOrOwner;
+		sReturned[8] = Double.toString(vList.get(0).monthlyPayment);
+		sReturned[9] = Double.toString(vList.get(0).principle);
+		sReturned[10] = Integer.toString(vList.get(0).paymentDuration);
+		sReturned[11] = Boolean.toString(vList.get(0).pended);
+
+		assertArrayEquals(s,sReturned);
+	}
+	
+	@Test
+	public void testUpdateOffer() {
+		Vehicle vehUpdated = new Vehicle();
+		
+		vehUpdated.make = "TEST_MAKE";
+		vehUpdated.model = "TEST_MODEL";
+		vehUpdated.year = 9999;
+		vehUpdated.mileage = 9999.9;
+		vehUpdated.vin = "TEST_VIN9999";
+		vehUpdated.bid = 9999.99;
+		vehUpdated.highestOffer = 100.0;
+		vehUpdated.highestBidderOrOwner = null;
+		vehUpdated.monthlyPayment = 0.0;
+		vehUpdated.principle = 0.0; // offer that was accepted
+		vehUpdated.paymentDuration = 60; // in months
+		vehUpdated.pended = false;
+		
+		// Update appropriate offer fields
+		vehUpdated.highestOffer = 200.0;
+		vehUpdated.highestBidderOrOwner = cus.userId;
+		
+		DealershipSystemWithSql.updateOffer(vehUpdated);
+		Vehicle vehReturned = DealershipSystemWithSql.getVehicle(veh.vin);
+		String[] sUpdated = new String[3];
+		String[] sReturned = new String[3];
+
+		sUpdated[0] = vehUpdated.vin;
+		sUpdated[1] = vehUpdated.highestOffer.toString();
+		sUpdated[2] = vehUpdated.highestBidderOrOwner;
+		
+		sReturned[0] = vehReturned.vin;
+		sReturned[1] = vehReturned.highestOffer.toString();
+		sReturned[2] = vehReturned.highestBidderOrOwner;
+
+		assertArrayEquals(sUpdated,sReturned);
+	}
+	
+	@Test
+	public void testUpdateVehicleSold() {
+		DealershipSystemWithSql.removeVehicle(veh);
+		DealershipSystemWithSql.createVehicle(veh);
+		
+		Vehicle vehUpdated = new Vehicle();
+		vehUpdated.make = "TEST_MAKE";
+		vehUpdated.model = "TEST_MODEL";
+		vehUpdated.year = 9999;
+		vehUpdated.mileage = 9999.9;
+		vehUpdated.vin = "TEST_VIN9999";
+		vehUpdated.bid = 9999.99;
+		vehUpdated.highestOffer = 100.0;
+		vehUpdated.highestBidderOrOwner = null;
+		vehUpdated.monthlyPayment = 0.0;
+		vehUpdated.principle = 0.0; // offer that was accepted
+		vehUpdated.paymentDuration = 60; // in months
+		vehUpdated.pended = false;
+		
+		// Update appropriate offer fields
+		vehUpdated.principle = 200.0;
+		vehUpdated.highestOffer = 200.0;
+		vehUpdated.highestBidderOrOwner = cus.userId;
+		vehUpdated.monthlyPayment = 200.0;
+		vehUpdated.pended = true;
+		
+		DealershipSystemWithSql.updateVehicleSold(vehUpdated);
+		Vehicle vehReturned = DealershipSystemWithSql.getVehicle(veh.vin);
+		String[] sUpdated = new String[5];
+		String[] sReturned = new String[5];
+
+		sUpdated[0] = vehUpdated.vin;
+		sUpdated[1] = vehUpdated.highestOffer.toString();
+		sUpdated[2] = vehUpdated.highestBidderOrOwner;
+		sUpdated[3] = vehUpdated.principle.toString();
+		sUpdated[4] = vehUpdated.pended.toString();
+		
+		sReturned[0] = vehReturned.vin;
+		sReturned[1] = vehReturned.highestOffer.toString();
+		sReturned[2] = vehReturned.highestBidderOrOwner;
+		sReturned[3] = vehUpdated.principle.toString();
+		sReturned[4] = vehUpdated.pended.toString();
+
+		assertArrayEquals(sUpdated,sReturned);
+	}
+	
+	@Test
+	public void testCalculatePayments() {
+	// Double calculatePayments(Double principle, Integer paymentDuration) {
+		// Simple interest
+		double monthlyActual, A, p, r, t;
+		p = 10_000.0;
+		r = 0.05;
+		t = 60.0; // in months
+		t /= 12.0; // convert to years
+		A = p*(1+r*t);
+		monthlyActual = A/60.0;
+		
+
+		double monthlyExpected = DealershipSystemWithSql.calculatePayments(p);
+
+		assertEquals(monthlyExpected, monthlyActual, 0.0001);
 	}
 }

@@ -212,14 +212,18 @@ public class DealershipSystemWithSql extends DealershipSystem{
 			PreparedStatement ps = conn.prepareStatement(query);
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
-				v.make = rs.getString("vin");
+				v.make = rs.getString("make");
 				v.model = rs.getString("model");
 				v.year = rs.getInt("year");
-				v.highestOffer = rs.getDouble("highestOffer");
 				v.mileage = rs.getDouble("mileage");
-				//v.condition = rs.getString("condition");
-				v.bid = rs.getDouble("bid");
 				v.vin = rs.getString("vin");
+				v.bid = rs.getDouble("bid");
+				v.highestOffer = rs.getDouble("highestOffer");
+				v.highestBidderOrOwner = rs.getString("highestBidderOrOwner");
+				v.monthlyPayment = rs.getDouble("monthlyPayment");
+				v.principle = rs.getDouble("principle");
+				v.paymentDuration = rs.getInt("paymentDuration");
+				v.pended = rs.getBoolean("pended");
 				vList.add(v);
 			}
 		} catch (SQLException e) {
@@ -233,12 +237,12 @@ public class DealershipSystemWithSql extends DealershipSystem{
 		log.trace("updateOffer(Vehicle)");
 		try (Connection conn = DriverManager.getConnection(credentials[0], credentials[1], credentials[2])) {
 			String query =
-					"INSERT INTO vehicles_proj_0 (highestOffer,highestBidderOrOwner) " +
-					"VALUES (?,?) " +
+					"UPDATE vehicles_proj_0 " +
+					"SET highestOffer=?,highestBidderOrOwner=? " +
 					"WHERE vin = ?";
 			PreparedStatement ps = conn.prepareStatement(query);
-			ps.setDouble(1,v.highestOffer);
-			ps.setString(2,v.highestBidderOrOwner);
+			ps.setDouble(1,v.highestOffer); // gets updated in calling function
+			ps.setString(2,v.highestBidderOrOwner); // gets updated in calling function
 			ps.setString(3,v.vin);
 			ps.executeUpdate();
 		} catch (SQLException e) {
@@ -250,20 +254,17 @@ public class DealershipSystemWithSql extends DealershipSystem{
 		log.trace("updateVehicleSold(Vehicle)");
 		try (Connection conn = DriverManager.getConnection(credentials[0], credentials[1], credentials[2])) {
 			String query =
-					"INSERT INTO vehicles_proj_0 " +
-					"(principle,highestOffer,highestBidderOrOwner,monthlyPayment) " +
-					"VALUES (?,?,?,?,?) " +
+					"UPDATE vehicles_proj_0 " +
+					"SET principle=?,highestOffer=?,highestBidderOrOwner=?,monthlyPayment=?,pended=? " +
 					"WHERE vin = ?";
 			PreparedStatement ps = conn.prepareStatement(query);
 			ps.setDouble(1,v.highestOffer); //set new principle
-			//ps.setDouble(2,null); //kill highestOffer, it's not relevant
-			//ps.setDouble(3,v.principle);
-			ps.setDouble(2,v.highestOffer);
+			ps.setDouble(2,v.highestOffer); //set highestOffer
 			ps.setString(3,v.highestBidderOrOwner);
 			ps.setDouble(4,v.monthlyPayment);
-			ps.setBoolean(5,true);
+			ps.setBoolean(5,v.pended);
 			ps.setString(6,v.vin);
-			ps.execute();
+			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -309,11 +310,12 @@ public class DealershipSystemWithSql extends DealershipSystem{
 		}	
 	}
 
-	public static Double calculatePayments(Double principle, Integer paymentDuration) {
+	public static Double calculatePayments(Double principle) {
 		log.trace("calculatePayments(Double, Integer)");
+		double d = 60.0; // duration in months
+		double t = 60.0/12.0; // duration in years
 		double p = principle;
-		double d = paymentDuration;
-		double totalInterest = d*DealershipSystem.INTEREST;
+		double totalInterest = DealershipSystem.INTEREST*t;
 		double totalWithInterest = p*(1+totalInterest);
 		return totalWithInterest/d;
 	}
