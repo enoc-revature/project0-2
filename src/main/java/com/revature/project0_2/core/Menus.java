@@ -228,8 +228,8 @@ public class Menus {
 		int i=1;
 		for(Vehicle v : vList) {
 			if(v.pended) 
-				System.out.printf("%s) %s\t%s\t%s\t\t%s\t%s\t\t%s\t%s%n",
-						i, v.make, v.model, "-", "-", nf.format(v.principle)+"\t", v.vin+"\t", v.pended?"Yes":"No");
+				System.out.printf("%s) %s\t%s\t%s\t\t%s\t%s\t%s\t%s%n",
+						i, v.make, v.model, "-", "-", nf.format(v.principle), v.vin+"\t", v.pended?"Yes":"No");
 			else 
 				System.out.printf("%s) %s\t%s\t%s\t%s\t%s\t%s\t%s%n",
 						i, v.make, v.model, nf.format(v.bid), nf.format(v.highestOffer), "-\t", v.vin+"\t", v.pended?"Yes":"No");
@@ -244,12 +244,12 @@ public class Menus {
 		ArrayList<Vehicle> vList = DealershipSystemWithSql.getVehicles();
 
 		// List Vehicles
-		System.out.println("   Make\tModel\tVIN\tOwner\tPrinciple\tPayments");
+		System.out.println("   Make\t\tModel\tVIN\tOwner\tPrinciple\tPayments");
 		int i=1;
 		for(Vehicle v : vList) {
 			if(v.pended) {
-				System.out.printf("%s) %s\t%s\t%s\t%s\t%s\t\t%s%n",
-						i, v.model, v.model, v.vin, v.highestBidderOrOwner, nf.format(v.principle), nf.format(v.monthlyPayment));
+				System.out.printf("%s) %s\t%s\t%s\t%s\t%s\t%s%n",
+						i, v.make, v.model, v.vin, v.highestBidderOrOwner, nf.format(v.principle), nf.format(v.monthlyPayment));
 			}
 			i++;
 		}
@@ -265,7 +265,7 @@ public class Menus {
 		for(Vehicle v : vList)
 			if(!v.pended)
 				System.out.printf("%s\t%s\t%s\t%s\t%s\t%s%n",
-						v.model, v.model, nf.format(v.bid), nf.format(v.highestOffer), v.vin, v.highestBidderOrOwner);
+						v.make, v.model, nf.format(v.bid), nf.format(v.highestOffer), v.vin, v.highestBidderOrOwner);
 		Vehicle v = new Vehicle();
 		String vin;
 		Double price;
@@ -299,7 +299,6 @@ public class Menus {
 			}
 		}
 	}
-		
 
 	public void  viewCustomerVehicles(Customer c) { // Customer Menu
 		// Display Vehicles
@@ -311,7 +310,7 @@ public class Menus {
 		System.out.println("Make\tModel\tVIN\tPrinciple\tPayments");
 		for(Vehicle v : vList) {
 			if(v.pended && c.userId.contentEquals(v.highestBidderOrOwner))
-				System.out.printf("%s\t%s\t%s\t%s\t\t%s%n",
+				System.out.printf("%s\t%s\t%s\t%s\t%s%n",
 						v.make, v.model, v.vin, nf.format(v.principle), nf.format(v.monthlyPayment));
 		}
 	}

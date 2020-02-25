@@ -3279,3 +3279,86 @@
 2020-02-25 08:57:49 TRACE root:291 - updateVehicleSold(Vehicle)
 2020-02-25 08:57:49 DEBUG root:335 - Still in while loop.
 2020-02-25 08:57:49 TRACE root:242 - DealershipSystemWithSql.getVehicles()
+2020-02-25 11:39:05 DEBUG root:48 - DealershipSystem.checkEmployeeCredentials(String id, String pw
+2020-02-25 11:39:05 TRACE root:159 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-25 11:39:05 DEBUG root:180 - EmployeeID: = J1324
+2020-02-25 11:39:05 DEBUG root:55 - pw input: pa$$word
+2020-02-25 11:39:05 DEBUG root:56 - pw file: pa$$word
+2020-02-25 11:39:05 TRACE root:159 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-25 11:39:05 DEBUG root:180 - EmployeeID: = J1324
+2020-02-25 11:39:46 DEBUG root:166 - removeOffers()
+2020-02-25 11:39:46 DEBUG root:180 - Still in while loop.
+2020-02-25 11:39:46 TRACE root:242 - DealershipSystemWithSql.getVehicles()
+2020-02-25 11:39:53 TRACE root:222 - viewVehicles()
+2020-02-25 11:39:53 TRACE root:242 - DealershipSystemWithSql.getVehicles()
+2020-02-25 11:40:12 DEBUG root:321 - chooseOffers()
+2020-02-25 11:40:12 DEBUG root:335 - Still in while loop.
+2020-02-25 11:40:12 TRACE root:242 - DealershipSystemWithSql.getVehicles()
+2020-02-25 11:43:10 DEBUG root:48 - DealershipSystem.checkEmployeeCredentials(String id, String pw
+2020-02-25 11:43:10 TRACE root:159 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-25 11:43:10 DEBUG root:180 - EmployeeID: = J1324
+2020-02-25 11:43:10 DEBUG root:55 - pw input: pa$$word
+2020-02-25 11:43:10 DEBUG root:56 - pw file: pa$$word
+2020-02-25 11:43:10 TRACE root:159 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-25 11:43:10 DEBUG root:180 - EmployeeID: = J1324
+2020-02-25 11:43:21 TRACE root:242 - viewAllPayments()
+2020-02-25 11:43:21 TRACE root:242 - DealershipSystemWithSql.getVehicles()
+2020-02-25 11:49:59 DEBUG root:83 - Program terminated soundly.
+2020-02-25 11:50:21 DEBUG root:48 - DealershipSystem.checkEmployeeCredentials(String id, String pw
+2020-02-25 11:50:21 TRACE root:159 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-25 11:50:21 DEBUG root:180 - EmployeeID: = J1324
+2020-02-25 11:50:21 DEBUG root:55 - pw input: pa$$word
+2020-02-25 11:50:21 DEBUG root:56 - pw file: pa$$word
+2020-02-25 11:50:21 TRACE root:159 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-25 11:50:21 DEBUG root:180 - EmployeeID: = J1324
+2020-02-25 11:50:41 TRACE root:242 - viewAllPayments()
+2020-02-25 11:50:41 TRACE root:242 - DealershipSystemWithSql.getVehicles()
+2020-02-25 11:51:37 DEBUG root:48 - DealershipSystem.checkEmployeeCredentials(String id, String pw
+2020-02-25 11:51:37 TRACE root:159 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-25 11:51:37 DEBUG root:180 - EmployeeID: = J1324
+2020-02-25 11:51:37 DEBUG root:55 - pw input: pa$$word
+2020-02-25 11:51:37 DEBUG root:56 - pw file: pa$$word
+2020-02-25 11:51:37 TRACE root:159 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-25 11:51:37 DEBUG root:180 - EmployeeID: = J1324
+2020-02-25 11:51:46 TRACE root:242 - viewAllPayments()
+2020-02-25 11:51:46 TRACE root:242 - DealershipSystemWithSql.getVehicles()
+2020-02-25 11:52:32 DEBUG root:48 - DealershipSystem.checkEmployeeCredentials(String id, String pw
+2020-02-25 11:52:32 TRACE root:159 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-25 11:52:32 DEBUG root:180 - EmployeeID: = J1324
+2020-02-25 11:52:32 DEBUG root:55 - pw input: pa$$word
+2020-02-25 11:52:32 DEBUG root:56 - pw file: pa$$word
+2020-02-25 11:52:32 TRACE root:159 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-25 11:52:32 DEBUG root:180 - EmployeeID: = J1324
+2020-02-25 11:52:34 TRACE root:242 - viewAllPayments()
+2020-02-25 11:52:34 TRACE root:242 - DealershipSystemWithSql.getVehicles()
+2020-02-25 11:53:11 TRACE root:222 - viewVehicles()
+2020-02-25 11:53:11 TRACE root:242 - DealershipSystemWithSql.getVehicles()
+2020-02-25 11:54:19 DEBUG root:48 - DealershipSystem.checkEmployeeCredentials(String id, String pw
+2020-02-25 11:54:19 TRACE root:159 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-25 11:54:19 DEBUG root:180 - EmployeeID: = J1324
+2020-02-25 11:54:19 DEBUG root:55 - pw input: pa$$word
+2020-02-25 11:54:19 DEBUG root:56 - pw file: pa$$word
+2020-02-25 11:54:19 TRACE root:159 - DealershipSystemWithSql.getEmployee(String id)
+2020-02-25 11:54:19 DEBUG root:180 - EmployeeID: = J1324
+2020-02-25 11:54:22 TRACE root:222 - viewVehicles()
+2020-02-25 11:54:22 TRACE root:242 - DealershipSystemWithSql.getVehicles()
+2020-02-25 11:54:33 DEBUG root:320 - chooseOffers()
+2020-02-25 11:54:33 DEBUG root:334 - Still in while loop.
+2020-02-25 11:54:33 TRACE root:242 - DealershipSystemWithSql.getVehicles()
+2020-02-25 11:55:11 DEBUG root:61 - DealershipSystem.checkCustomerCredentials(String id, String pw)
+2020-02-25 11:55:11 TRACE root:185 - DealershipSystemWithSql.getCustomer(String id)
+2020-02-25 11:55:11 DEBUG root:66 - pw input: NewCarSmell
+2020-02-25 11:55:11 DEBUG root:67 - pw file: NewCarSmell
+2020-02-25 11:55:11 TRACE root:185 - DealershipSystemWithSql.getCustomer(String id)
+2020-02-25 11:55:27 TRACE root:222 - viewVehicles()
+2020-02-25 11:55:27 TRACE root:242 - DealershipSystemWithSql.getVehicles()
+2020-02-25 11:59:35 DEBUG root:61 - DealershipSystem.checkCustomerCredentials(String id, String pw)
+2020-02-25 11:59:35 TRACE root:185 - DealershipSystemWithSql.getCustomer(String id)
+2020-02-25 11:59:35 DEBUG root:66 - pw input: NewCarSmell
+2020-02-25 11:59:35 DEBUG root:67 - pw file: NewCarSmell
+2020-02-25 11:59:35 TRACE root:185 - DealershipSystemWithSql.getCustomer(String id)
+2020-02-25 11:59:41 DEBUG root:305 - viewCustomerVehicles()
+2020-02-25 11:59:41 TRACE root:242 - DealershipSystemWithSql.getVehicles()
+2020-02-25 11:59:54 TRACE root:383 - makeOffer(Customer)
+2020-02-25 11:59:54 DEBUG root:397 - Still in while loop.
+2020-02-25 11:59:54 TRACE root:242 - DealershipSystemWithSql.getVehicles()

@@ -92,7 +92,7 @@ public class UnitTestProject0_2 {
 
 	@Test
 	public void testEmployeeLoginFail() {
-		String input = "wrong\npassword\n";
+		String input = "e\nwrong\npassword\n";
 		InputStream in = new ByteArrayInputStream(input.getBytes());	
 		System.setIn(in);
 		assertNull(menus.employeeLogin()); // test is a success if code execution reaches the assert line.

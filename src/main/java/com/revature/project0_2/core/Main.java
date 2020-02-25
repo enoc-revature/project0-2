@@ -31,7 +31,6 @@
 
 package com.revature.project0_2.core;
 import java.util.Scanner;
-
 import org.apache.log4j.Logger;
 
 public class Main {
