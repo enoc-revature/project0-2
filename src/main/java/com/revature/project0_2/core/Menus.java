@@ -241,15 +241,17 @@ public class Menus {
 		// Display Vehicles
 		log.trace("viewAllPayments()");
 		NumberFormat nf = NumberFormat.getCurrencyInstance();
+		Customer c = null;
 		ArrayList<Vehicle> vList = DealershipSystemWithSql.getVehicles();
 
 		// List Vehicles
-		System.out.println("   Make\t\tModel\tVIN\tOwner\t\tPrinciple\tPayments");
+		System.out.println("   Make\t\tModel\tVIN\temail\t\tPrinciple\tPayments");
 		int i=1;
 		for(Vehicle v : vList) {
+			c = DealershipSystemWithSql.getCustomer(v.highestBidderOrOwner);
 			if(v.pended) {
 				System.out.printf("%s) %s\t%s\t%s\t%s\t%s\t%s%n",
-						i, v.make, v.model, v.vin, v.highestBidderOrOwner, nf.format(v.principle), nf.format(v.monthlyPayment));
+						i, v.make, v.model, v.vin, c.email, nf.format(v.principle), nf.format(v.monthlyPayment));
 			}
 			i++;
 		}
@@ -328,6 +330,7 @@ public class Menus {
 		char option;
 		NumberFormat nf = NumberFormat.getCurrencyInstance();
 		int i = 1;
+		int offset=0;
 		int carNum = 0;
 		while(!leaveMenu) {
 			Scanner s = new Scanner(System.in);
@@ -335,12 +338,15 @@ public class Menus {
 			System.out.println("   Make\t\tModel\tPrice\t\tOffer\t\tVIN");
 			ArrayList<Vehicle> vList = DealershipSystemWithSql.getVehicles();
 			i=1;
+			offset=0;
 			for(Vehicle vIter : vList) {
 				if(!vIter.pended) {
 					System.out.printf("%s) %s\t%s\t%s\t%s\t%s%n",
 							i, vIter.make, vIter.model, nf.format(vIter.bid), nf.format(vIter.highestOffer), vIter.vin);
 					i++;
-				} 
+				} else {
+					offset++;
+				}
 			}
 			System.out.print("Would you like to accept an offer(y/n): ");
 			input = s.nextLine();
@@ -353,10 +359,13 @@ public class Menus {
 				//vin = s.nextLine();
 				//log.debug("vin="+vin);
 				carNum = s.nextInt();
-				log.debug("carNume="+carNum);
+				log.debug("carNum="+carNum);
+				log.debug("offset="+offset);
+				log.debug("carNum-offset="+(carNum+offset));
 				
 				//v = DealershipSystemWithSql.getVehicle(vin);
-				v = DealershipSystemWithSql.getVehicle(vList.get(carNum-1).vin);
+				log.debug("Model: " + vList.get(carNum+offset-1).model);
+				v = DealershipSystemWithSql.getVehicle(vList.get(carNum+offset-1).vin);
 					
 				log.debug("After getVehicle()");
 				if(v==null) {

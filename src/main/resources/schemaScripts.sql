@@ -44,16 +44,19 @@ PRIMARY KEY(vin)
 
 
 -- Populate Tables
+TRUNCATE TABLE employees_proj_0;
 INSERT INTO employees_proj_0
 (firstName,lastName,address,email,userid,password)
 VALUES
 	('John','Smith','123 Ave.','john.smith@email.com','J1324','pa$$word');
-					
+		
+TRUNCATE TABLE customers_proj_0;
 INSERT INTO customers_proj_0
 (firstName,lastName,address,email,creditcard,userid,password)
 VALUES
 	('Tracey','Adams',null,'tracey.adams@email.com','0123456789012345','TA5432','NewCarSmell');
 
+TRUNCATE TABLE vehicles_proj_0;
 INSERT INTO vehicles_proj_0
 (make,model,year,mileage,vin,bid,highestOffer,highestBidderOrOwner,monthlyPayment,principle,paymentDuration,pended)
 VALUES
