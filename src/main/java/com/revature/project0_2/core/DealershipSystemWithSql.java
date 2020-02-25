@@ -334,12 +334,13 @@ public class DealershipSystemWithSql extends DealershipSystem{
 		}	
 	}
 
-	/*// Replaced the bottom two methods with a soft-delete sql procedure.
 	public static void removeVehicle(Vehicle v) {
 		log.trace("removeVehicle(Vehicle)");
 		try (Connection conn = DriverManager.getConnection(credentials[0], credentials[1], credentials[2])) {
+//			PreparedStatement ps = conn.prepareStatement(
+//					"DELETE FROM vehicles_proj_0 WHERE vin=?");
 			PreparedStatement ps = conn.prepareStatement(
-					"DELETE FROM vehicles_proj_0 WHERE vin=?");
+					"CALL delete_vehicle(?)");
 			ps.setString(1, v.vin);
 			ps.executeUpdate();
 			
@@ -351,35 +352,10 @@ public class DealershipSystemWithSql extends DealershipSystem{
 	public static void removeVehicle(String id) {
 		log.trace("removeVehicle(Vehicle)");
 		try (Connection conn = DriverManager.getConnection(credentials[0], credentials[1], credentials[2])) {
+//			PreparedStatement ps = conn.prepareStatement(
+//					"DELETE FROM vehicles_proj_0 WHERE vin=?");
 			PreparedStatement ps = conn.prepareStatement(
-					"DELETE FROM vehicles_proj_0 WHERE vin=?");
-			ps.setString(1, id);
-			ps.executeUpdate();
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}	
-	}
-	*/
-
-	public static void removeVehicle(Vehicle v) {
-		log.trace("removeVehicle(Vehicle)");
-		try (Connection conn = DriverManager.getConnection(credentials[0], credentials[1], credentials[2])) {
-			PreparedStatement ps = conn.prepareStatement(
-					"DELETE FROM vehicles_proj_0 WHERE vin=?");
-			ps.setString(1, v.vin);
-			ps.executeUpdate();
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}	
-	}
-
-	public static void removeVehicle(String id) {
-		log.trace("removeVehicle(Vehicle)");
-		try (Connection conn = DriverManager.getConnection(credentials[0], credentials[1], credentials[2])) {
-			PreparedStatement ps = conn.prepareStatement(
-					"DELETE FROM vehicles_proj_0 WHERE vin=?");
+					"CALL delete_vehicle(?)");
 			ps.setString(1, id);
 			ps.executeUpdate();
 			

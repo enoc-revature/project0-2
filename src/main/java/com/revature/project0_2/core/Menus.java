@@ -147,7 +147,7 @@ public class Menus {
 		System.out.print("VIN(*): ");
 		v.vin = s.nextLine();
 		
-		System.out.print("Bid Price(*): ");
+		System.out.print("Initial Price(*): ");
 		temp = s.nextLine();
 		v.bid = Double.parseDouble(temp);
 		
@@ -156,7 +156,7 @@ public class Menus {
 		log.debug("Year: "+v.year);
 		log.debug("Mileage: "+v.mileage);
 		log.debug("VIN: "+v.vin);
-		log.debug("Bid Price: "+v.bid);
+		log.debug("Initial Price: "+v.bid);
 
 		// Save vehicle
 		DealershipSystemWithSql.createVehicle(v);
@@ -178,7 +178,7 @@ public class Menus {
 		while(!leaveMenu) {
 			Scanner s = new Scanner(System.in);
 			log.debug("Still in while loop.");
-			System.out.println("   Make\t\tModel\t\tBid\tOffer\t\tVIN\tPended");
+			System.out.println("   Make\t\tModel\t\tPrice\tOffer\t\tVIN\tPended");
 			ArrayList<Vehicle> vList = DealershipSystemWithSql.getVehicles();
 			i=1;
 			for(Vehicle vIter : vList) {
@@ -224,7 +224,7 @@ public class Menus {
 		ArrayList<Vehicle> vList = DealershipSystemWithSql.getVehicles();
 
 		// List Vehicles
-		System.out.println("   Make\t\tModel\tBid\t\tOffer\t\tPrice\t\tVIN\t\tPended");
+		System.out.println("   Make\t\tModel\tInitial Price\tOffer\t\tSettled Price\tVIN\t\tPended");
 		int i=1;
 		for(Vehicle v : vList) {
 			if(v.pended) 
@@ -244,7 +244,7 @@ public class Menus {
 		ArrayList<Vehicle> vList = DealershipSystemWithSql.getVehicles();
 
 		// List Vehicles
-		System.out.println("   Make\t\tModel\tVIN\tOwner\tPrinciple\tPayments");
+		System.out.println("   Make\t\tModel\tVIN\tOwner\t\tPrinciple\tPayments");
 		int i=1;
 		for(Vehicle v : vList) {
 			if(v.pended) {
@@ -261,7 +261,7 @@ public class Menus {
 		NumberFormat nf = NumberFormat.getCurrencyInstance();
 
 		// List Vehicles
-		System.out.println("Make\tModel\tBid\tOffer\tVIN\tOwner\tPayments");
+		System.out.println("Make\tModel\tPrice\tOffer\tVIN\tOwner\tPayments");
 		for(Vehicle v : vList)
 			if(!v.pended)
 				System.out.printf("%s\t%s\t%s\t%s\t%s\t%s%n",
@@ -332,12 +332,12 @@ public class Menus {
 		while(!leaveMenu) {
 			Scanner s = new Scanner(System.in);
 			log.debug("Still in while loop.");
-			System.out.println("   Make\t\tModel\tBid\t\tOffer\t\tVIN");
+			System.out.println("   Make\t\tModel\tPrice\t\tOffer\t\tVIN");
 			ArrayList<Vehicle> vList = DealershipSystemWithSql.getVehicles();
 			i=1;
 			for(Vehicle vIter : vList) {
 				if(!vIter.pended) {
-					System.out.printf("%s) %s\t%s\t%s\t\t%s\t%s%n",
+					System.out.printf("%s) %s\t%s\t%s\t%s\t%s%n",
 							i, vIter.make, vIter.model, nf.format(vIter.bid), nf.format(vIter.highestOffer), vIter.vin);
 					i++;
 				} 
@@ -395,7 +395,7 @@ public class Menus {
 		while(!leaveMenu) {
 			Scanner s = new Scanner(System.in);
 			log.debug("Still in while loop.");
-			System.out.println("   Make\t\tModel\tYear\tBid\t\tOffer\t\tVIN\tPended");
+			System.out.println("   Make\t\tModel\tYear\tPrice\t\tOffer\t\tVIN\tPended");
 			ArrayList<Vehicle> vList = DealershipSystemWithSql.getVehicles();
 			i=1;
 			for(Vehicle vIter : vList) {

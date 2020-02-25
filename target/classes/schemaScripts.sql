@@ -38,7 +38,6 @@ monthlyPayment NUMERIC(10,2),
 principle NUMERIC(10,2),
 paymentDuration INTEGER,
 pended BOOLEAN,
-removed BOOLEAN,
 PRIMARY KEY(vin)
 );
 
@@ -58,17 +57,17 @@ VALUES
 INSERT INTO vehicles_proj_0
 (make,model,year,mileage,vin,bid,highestOffer,highestBidderOrOwner,monthlyPayment,principle,paymentDuration,pended)
 VALUES
-	('Toyota','Yaris',2007,107003.1,'JVP3462',1999.99,null,null,null,null,null,null),
-	('Toyota','Camry',2019,12059.0,'MP20394',5999.99,null,null,null,null,null,null),
-	('Saturn','Aura',1999,185040.5,'3239350',1449.99,null,null,null,null,null,null),
-	('Dodge','Charger',2012,124500.3,'GTO2039',3999.00,null,null,null,null,null,null),
-	('Honda','Civic',2017,52148.8,'FP02934',1999.99,null,null,null,null,null,null);
+	('Toyota','Yaris',2007,107003.1,'JVP3462',1999.99,1000.00,null,null,null,null,null),
+	('Toyota','Camry',2019,12059.0,'MP20394',5999.99,2300.00,null,null,null,null,null),
+	('Saturn','Aura',1999,185040.5,'3239350',1449.99,1400.00,null,null,null,null,null),
+	('Dodge','Charger',2012,124500.3,'GTO2039',3999.00,3500.00,null,null,null,null,null),
+	('Honda','Civic',2017,52148.8,'FP02934',1999.99,1000.00,null,null,null,null,null);
 					
 				
 				
 select * from employees_proj_0;
 select * from customers_proj_0;
-select * from vehicles_proj_0;		
+select * from vehicles_proj_0;	
 				
 
 
@@ -83,6 +82,12 @@ BEGIN
 	SET removed=true
 	WHERE vin=id;
 END; $$ LANGUAGE plpgsql;
-				
 call soft_delete_vehicle('JVP3462');
-				
+
+
+CREATE OR REPLACE PROCEDURE delete_vehicle(in id varchar) as $$
+BEGIN
+	DELETE FROM vehicles_proj_0
+	WHERE vin=id;
+END; $$ LANGUAGE plpgsql;
+call delete_vehicle('JVP3462');
