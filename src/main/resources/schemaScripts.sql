@@ -38,6 +38,7 @@ monthlyPayment NUMERIC(10,2),
 principle NUMERIC(10,2),
 paymentDuration INTEGER,
 pended BOOLEAN,
+removed BOOLEAN DEFAULT false,
 PRIMARY KEY(vin)
 );
 
@@ -53,7 +54,7 @@ INSERT INTO customers_proj_0
 (firstName,lastName,address,email,creditcard,userid,password)
 VALUES
 	('Tracey','Adams',null,'tracey.adams@email.com','0123456789012345','TA5432','NewCarSmell');
-						
+
 INSERT INTO vehicles_proj_0
 (make,model,year,mileage,vin,bid,highestOffer,highestBidderOrOwner,monthlyPayment,principle,paymentDuration,pended)
 VALUES
@@ -75,7 +76,13 @@ select * from vehicles_proj_0;
 --TRUNCATE TABLE customers_proj_0;
 --TRUNCATE TABLE vehicles_proj_0;
 
+
+CREATE OR REPLACE PROCEDURE soft_delete_vehicle(in id varchar) as $$
+BEGIN
+	UPDATE vehicles_proj_0
+	SET removed=true
+	WHERE vin=id;
+END; $$ LANGUAGE plpgsql;
 				
-				
-				
+call soft_delete_vehicle('JVP3462');
 				

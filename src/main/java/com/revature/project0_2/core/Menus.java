@@ -178,12 +178,12 @@ public class Menus {
 		while(!leaveMenu) {
 			Scanner s = new Scanner(System.in);
 			log.debug("Still in while loop.");
-			System.out.println("   Make\tModel\tBid\tOffer\tVIN");
+			System.out.println("   Make\t\tModel\t\tBid\tOffer\t\tVIN\tPended");
 			ArrayList<Vehicle> vList = DealershipSystemWithSql.getVehicles();
 			i=1;
 			for(Vehicle vIter : vList) {
-				System.out.printf("%s) %s\t%s\t%s\t%s\t%s%n",
-						i, vIter.make, vIter.model, nf.format(vIter.bid), nf.format(vIter.highestOffer), vIter.vin);
+				System.out.printf("%s) %s\t%s\t%s\t%s\t%s\t%s%n",
+						i, vIter.make, vIter.model, nf.format(vIter.bid), nf.format(vIter.highestOffer), vIter.vin, vIter.pended?"Yes":"No");
 				i++;
 			}
 			System.out.print("Would you like to remove a vehicle(y/n): ");
@@ -224,12 +224,12 @@ public class Menus {
 		ArrayList<Vehicle> vList = DealershipSystemWithSql.getVehicles();
 
 		// List Vehicles
-		System.out.println("   Make\t\tModel\tBid\t\tOffer\tPrice\t\tVIN\t\tPended");
+		System.out.println("   Make\t\tModel\tBid\t\tOffer\t\tPrice\t\tVIN\t\tPended");
 		int i=1;
 		for(Vehicle v : vList) {
 			if(v.pended) 
 				System.out.printf("%s) %s\t%s\t%s\t\t%s\t%s\t%s\t%s%n",
-						i, v.make, v.model, "-", "-", nf.format(v.principle), v.vin+"\t", v.pended?"Yes":"No");
+						i, v.make, v.model, "-", "-\t", nf.format(v.principle), v.vin+"\t", v.pended?"Yes":"No");
 			else 
 				System.out.printf("%s) %s\t%s\t%s\t%s\t%s\t%s\t%s%n",
 						i, v.make, v.model, nf.format(v.bid), nf.format(v.highestOffer), "-\t", v.vin+"\t", v.pended?"Yes":"No");
@@ -317,7 +317,7 @@ public class Menus {
 
 	public void chooseOffer() { // Employee
 		// Display Vehicles
-		log.debug("chooseOffers()");
+		log.debug("chooseOffer()");
 
 		// List Vehicles
 		Vehicle v = new Vehicle();
@@ -332,15 +332,15 @@ public class Menus {
 		while(!leaveMenu) {
 			Scanner s = new Scanner(System.in);
 			log.debug("Still in while loop.");
-			System.out.println("   Make\tModel\tBid\tOffer\tVIN");
+			System.out.println("   Make\t\tModel\tBid\t\tOffer\t\tVIN");
 			ArrayList<Vehicle> vList = DealershipSystemWithSql.getVehicles();
 			i=1;
 			for(Vehicle vIter : vList) {
 				if(!vIter.pended) {
-					System.out.printf("%s) %s\t%s\t%s\t%s\t%s%n",
+					System.out.printf("%s) %s\t%s\t%s\t\t%s\t%s%n",
 							i, vIter.make, vIter.model, nf.format(vIter.bid), nf.format(vIter.highestOffer), vIter.vin);
-				}
-				i++;
+					i++;
+				} 
 			}
 			System.out.print("Would you like to accept an offer(y/n): ");
 			input = s.nextLine();
@@ -395,15 +395,24 @@ public class Menus {
 		while(!leaveMenu) {
 			Scanner s = new Scanner(System.in);
 			log.debug("Still in while loop.");
-			System.out.println("   Make\tModel\tYear\tBid\tOffer\tVIN");
+			System.out.println("   Make\t\tModel\tYear\tBid\t\tOffer\t\tVIN\tPended");
 			ArrayList<Vehicle> vList = DealershipSystemWithSql.getVehicles();
+			i=1;
 			for(Vehicle vIter : vList) {
+				/*
+				if(v.pended) 
+					System.out.printf("%s) %s\t%s\t%s\t\t%s\t%s\t%s\t%s%n",
+							i, v.make, v.model, "-", "-", nf.format(v.principle), v.vin+"\t", v.pended?"Yes":"No");
+				else				 
+					System.out.printf("%s) %s\t%s\t%s\t%s\t%s\t%s\t%s%n",
+							i, v.make, v.model, nf.format(v.bid), nf.format(v.highestOffer), "-\t", v.vin+"\t", v.pended?"Yes":"No");
+				*/
 				if(!vIter.pended) {
 					System.out.printf("%s) %s\t%s\t%s\t%s\t%s\t%s\t%s%n",
 							i, vIter.make, vIter.model, vIter.year, nf.format(vIter.bid), nf.format(vIter.highestOffer), vIter.vin, vIter.pended?"Yes":"No");
 				} else {
-					System.out.printf("%s) %s\t%s\t%s\t%s\t%s\t%s%n",
-							i, vIter.make, vIter.model, vIter.year, "-", "-", vIter.vin, vIter.pended?"Yes":"No");
+					System.out.printf("%s) %s\t%s\t%s\t%s\t%s\t%s\t%s%n",
+							i, vIter.make, vIter.model, vIter.year, "-\t", "-\t", vIter.vin, vIter.pended?"Yes":"No");
 				}
 				i++;
 			}
