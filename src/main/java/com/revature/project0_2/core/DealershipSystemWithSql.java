@@ -44,6 +44,30 @@ public class DealershipSystemWithSql extends DealershipSystem{
 
 	}
 
+	public static boolean checkEmployeeCredentials(String id, String pw) {
+		log.debug("DealershipSystem.checkEmployeeCredentials(String id, String pw");
+		//SerializationDAO dao = new SerializationDAO();
+		//Employee emp = (Employee) dao.readSerial(id,'E');
+		Employee emp = getEmployee(id);
+		if(emp == null) {
+			return false;
+		}
+		log.debug("pw input: "+pw);
+		log.debug("pw file: " + emp.password);
+		return pw.equals(emp.password);
+	}
+
+	public static boolean checkCustomerCredentials(String id, String pw) {
+		log.debug("DealershipSystem.checkCustomerCredentials(String id, String pw)");
+		Customer cus = getCustomer(id);
+		if(cus == null) {
+			return false;
+		}
+		log.debug("pw input: "+pw);
+		log.debug("pw file: " + cus.password);
+		return pw.equals(cus.password);
+	}
+
 	public static boolean recordExists(String id, Character ch) {
 		log.trace("recordExists(String,Character)");
 		Boolean duplicate = false;
@@ -57,11 +81,16 @@ public class DealershipSystemWithSql extends DealershipSystem{
 					break;
 		}
 		log.debug("Query String: " + query);
-		log.debug("UserID: " + id);
+		log.debug("ID: " + id);
 		try (Connection conn = DriverManager.getConnection(credentials[0], credentials[1], credentials[2])) {
+			log.debug("recordExists postgres connection");
 			PreparedStatement psCheckUnique = conn.prepareStatement(query);
 			psCheckUnique.setString(1, id);
+			log.debug("psCheckUnique");
 			ResultSet rsCheckUnique = psCheckUnique.executeQuery();
+			log.debug("rsCheckUnique");
+			duplicate = rsCheckUnique.next();
+			log.debug("duplicate=rsChechUnique assigns " + duplicate);
 			duplicate = rsCheckUnique.next();
 			if(duplicate) {
 				log.debug("Duplicate exists");
@@ -99,23 +128,26 @@ public class DealershipSystemWithSql extends DealershipSystem{
 		log.trace("createVehicle(Vehicle)");
 		try (Connection conn = DriverManager.getConnection(credentials[0], credentials[1], credentials[2])) {
 			if(!recordExists(v.vin, 'V')) {
-			PreparedStatement ps = conn.prepareStatement(
-					"INSERT INTO vehicles_proj_0 " +
-					"(make,model,year,mileage,vin,bid,highestOffer,highestBidderOrOwner,monthlyPayment,principle,paymentDuration,pended) " +
-					"VALUES(?,?,?,?,?,?,?,?,?,?,?,?)");
-			ps.setString(1, v.make);
-			ps.setString(2, v.model);
-			ps.setInt(3, v.year);
-			ps.setDouble(4, v.mileage);
-			ps.setString(5, v.vin);
-			ps.setDouble(6, v.bid);
-			ps.setDouble(7, v.highestOffer);
-			ps.setString(8, v.highestBidderOrOwner);
-			ps.setDouble(9, v.monthlyPayment);
-			ps.setDouble(10, v.principle);
-			ps.setInt(11, v.paymentDuration);
-			ps.setBoolean(12, v.pended);
-			ps.executeUpdate();
+				//log.debug("createVehicle before ps creation");
+				PreparedStatement ps = conn.prepareStatement(
+						"INSERT INTO vehicles_proj_0 " +
+						"(make,model,year,mileage,vin,bid,highestOffer,highestBidderOrOwner,monthlyPayment,principle,paymentDuration,pended) " +
+						"VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
+				//log.debug("createVehicle after ps creation");
+				ps.setString(1, v.make); //log.debug("make assigned");
+				ps.setString(2, v.model); //log.debug("model assigned");
+				ps.setInt(3, v.year); //log.debug("year assigned");
+				ps.setDouble(4, v.mileage); //log.debug("mileage assigned");
+				ps.setString(5, v.vin); //log.debug("vin assigned");
+				ps.setDouble(6, v.bid); //log.debug("bid assigned");
+				ps.setDouble(7, v.highestOffer); //log.debug("highestOffer assigned");
+				ps.setString(8, v.highestBidderOrOwner); //log.debug("highestBidderOrOwner assigned");
+				ps.setDouble(9, v.monthlyPayment); //log.debug("monthlyPayment assigned");
+				ps.setDouble(10, v.principle); //log.debug("principle assigned");
+				ps.setInt(11, v.paymentDuration); //log.debug("paymentDuration assigned");
+				ps.setBoolean(12, v.pended); //log.debug("pended assigned");
+				//log.debug("createVehicle ps assigned");
+				ps.executeUpdate();
 			}
 		} catch (SQLException err) {
 			err.printStackTrace();
@@ -125,7 +157,7 @@ public class DealershipSystemWithSql extends DealershipSystem{
 	// READ
 	public static Employee getEmployee(String id) {
 		log.trace("DealershipSystemWithSql.getEmployee(String id)");
-		Employee e = new Employee();
+		Employee e = null;
 		try (Connection conn = DriverManager.getConnection(credentials[0], credentials[1], credentials[2])) {
 			String query =
 					"SELECT * FROM employees_proj_0 " +
@@ -134,6 +166,7 @@ public class DealershipSystemWithSql extends DealershipSystem{
 			ps.setString(1, id);
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
+				e = new Employee();
 				e.firstName = rs.getString("firstName");
 				e.lastName = rs.getString("lastName");
 				e.address = rs.getString("address");
@@ -150,7 +183,7 @@ public class DealershipSystemWithSql extends DealershipSystem{
 
 	public static Customer getCustomer(String id) {
 		log.trace("DealershipSystemWithSql.getCustomer(String id)");
-		Customer c = new Customer();
+		Customer c = null;
 		try (Connection conn = DriverManager.getConnection(credentials[0], credentials[1], credentials[2])) {
 			String query =
 					"SELECT * FROM customers_proj_0 " +
@@ -159,6 +192,7 @@ public class DealershipSystemWithSql extends DealershipSystem{
 			ps.setString(1, id);
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
+				c = new Customer();
 				c.firstName = rs.getString("firstName");
 				c.lastName = rs.getString("lastName");
 				c.address = rs.getString("address");
@@ -174,8 +208,8 @@ public class DealershipSystemWithSql extends DealershipSystem{
 	}
 
 	public static Vehicle getVehicle(String vin) {
-		log.trace("DealershipSystemWithSql.getVehicles(String)");
-		Vehicle v = new Vehicle();
+		log.trace("DealershipSystemWithSql.getVehicle(String)");
+		Vehicle v = null;
 		try (Connection conn = DriverManager.getConnection(credentials[0], credentials[1], credentials[2])) {
 			String query =
 					"SELECT * FROM vehicles_proj_0 " +
@@ -184,6 +218,7 @@ public class DealershipSystemWithSql extends DealershipSystem{
 			ps.setString(1, vin);
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
+				v = new Vehicle();
 				v.make = rs.getString("make");
 				v.model = rs.getString("model");
 				v.year = rs.getInt("year");
@@ -205,13 +240,15 @@ public class DealershipSystemWithSql extends DealershipSystem{
 
 	public static ArrayList<Vehicle> getVehicles() {
 		log.trace("DealershipSystemWithSql.getVehicles()");
-		Vehicle v = new Vehicle();
+		Vehicle v = null;
 		ArrayList<Vehicle> vList = new ArrayList<Vehicle>();
 		try (Connection conn = DriverManager.getConnection(credentials[0], credentials[1], credentials[2])) {
-			String query = "SELECT * FROM vehicles_proj_0";
+			String query = "SELECT * FROM vehicles_proj_0 " +
+							"ORDER BY bid";
 			PreparedStatement ps = conn.prepareStatement(query);
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
+				v = new Vehicle();
 				v.make = rs.getString("make");
 				v.model = rs.getString("model");
 				v.year = rs.getInt("year");
@@ -258,8 +295,8 @@ public class DealershipSystemWithSql extends DealershipSystem{
 					"SET principle=?,highestOffer=?,highestBidderOrOwner=?,monthlyPayment=?,pended=? " +
 					"WHERE vin = ?";
 			PreparedStatement ps = conn.prepareStatement(query);
-			ps.setDouble(1,v.highestOffer); //set new principle
-			ps.setDouble(2,v.highestOffer); //set highestOffer
+			ps.setDouble(1,v.principle); //set new principle
+			ps.setDouble(2,v.principle); //set highestOffer
 			ps.setString(3,v.highestBidderOrOwner);
 			ps.setDouble(4,v.monthlyPayment);
 			ps.setBoolean(5,v.pended);
@@ -303,6 +340,19 @@ public class DealershipSystemWithSql extends DealershipSystem{
 			PreparedStatement ps = conn.prepareStatement(
 					"DELETE FROM vehicles_proj_0 WHERE vin=?");
 			ps.setString(1, v.vin);
+			ps.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}	
+	}
+
+	public static void removeVehicle(String id) {
+		log.trace("removeVehicle(Vehicle)");
+		try (Connection conn = DriverManager.getConnection(credentials[0], credentials[1], credentials[2])) {
+			PreparedStatement ps = conn.prepareStatement(
+					"DELETE FROM vehicles_proj_0 WHERE vin=?");
+			ps.setString(1, id);
 			ps.executeUpdate();
 			
 		} catch (SQLException e) {

@@ -11,21 +11,21 @@ public class Vehicle implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public String make;
-	public String model;
-	public Integer year;
-	public Double mileage;
+	public String make; //req
+	public String model; //req
+	public Integer year = 0;
+	public Double mileage = 0.0;
 	//public String condition; // make enum later
 	//public transient ArrayList<String> bid;
 	//public transient ArrayList<String >offer;
 	//public transient String highestBid;
 	//public transient String lowestOffer;
-	public Double bid;
-	public Double highestOffer;
-	public String vin;
+	public Double bid; //req
+	public Double highestOffer=0.0;
+	public String vin; //req
 	public String highestBidderOrOwner;
-	public Double monthlyPayment;
-	public Double principle; // offer that was accepted
-	public Integer paymentDuration; // in months
-	public Boolean pended;
+	public Double monthlyPayment = 0.0;
+	public Double principle = 0.0; // offer that was accepted
+	public Integer paymentDuration = 60; // in months
+	public Boolean pended = false;
 }

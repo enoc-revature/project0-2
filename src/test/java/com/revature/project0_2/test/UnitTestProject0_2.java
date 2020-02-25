@@ -2,6 +2,8 @@ package com.revature.project0_2.test;
 
 import static org.junit.Assert.*;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 import org.apache.log4j.Logger;
@@ -24,6 +26,7 @@ public class UnitTestProject0_2 {
 	Employee emp = new Employee();
 	Customer cus = new Customer();
 	Vehicle veh = new Vehicle();
+	Menus menus = new Menus();
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -69,10 +72,57 @@ public class UnitTestProject0_2 {
 	@After
 	public void tearDown() throws Exception {
 	}
-
+	
 	/*
-	 * DealershipSystemWithSql - Employees SQL Operations
+	 *		InputStream in = new ByteArrayInputStream(input.getBytes());
+	 *		System.setIn(in); // This part preloads the string input 
+	 *					  	  // into the input stream buffer before the method to test is called.
+	 * Main and Menus classes
+	 * 
 	 */
+	@Test
+	public void testQuitMain() {
+		String[] args = {""};
+		String input = "Q\n";
+		InputStream in = new ByteArrayInputStream(input.getBytes());	
+		System.setIn(in);
+		Main.main(args);
+		assertTrue(true);
+	}
+
+	@Test
+	public void testEmployeeLoginFail() {
+		String input = "wrong\npassword\n";
+		InputStream in = new ByteArrayInputStream(input.getBytes());	
+		System.setIn(in);
+		assertNull(menus.employeeLogin()); // test is a success if code execution reaches the assert line.
+	}
+	
+	@Test
+	public void testEmployeeLoginPass() {
+		String input = "J1324\npA$$word\n";
+		InputStream in = new ByteArrayInputStream(input.getBytes());	
+		System.setIn(in);
+		assertEquals(new Employee(), menus.employeeLogin()); // test is a success if code execution reaches the assert line.
+	}
+
+	@Test
+	public void testCustomerLoginFail() {
+		String input = "wrong\npassword\n";
+		InputStream in = new ByteArrayInputStream(input.getBytes());	
+		System.setIn(in);
+		assertNull(menus.customerLogin()); // test is a success if code execution reaches the assert line.
+	}
+
+	@Test
+	public void testCustomerLoginPass() {
+		String input = "TA5835\nNewCarSmell$1$$word\n";
+		InputStream in = new ByteArrayInputStream(input.getBytes());	
+		System.setIn(in);
+		assertEquals(new Customer(), menus.customerLogin()); // test is a success if code execution reaches the assert line.
+		
+	}
+
 	@Test
 	public void createEmployee_getEmployeeDuplicate() {
 		String[] s = new String[6];
